@@ -1,0 +1,149 @@
+/* Pace: Page Progress Bar */
+.pace .pace-progress {
+    background: $color-base-1!important;
+}
+
+/* Light Gallery */
+.lightbox-item {
+    cursor: pointer;
+}
+
+/* Masonry - Isotope */
+.masonry-item {
+    margin-bottom: 3rem;
+}
+
+.masonry-item .block {
+    margin-bottom: 0 !important;
+}
+
+// Morphtext
+.morphext > .animated {
+    display: inline-block;
+}
+
+// Easy pie chart
+.easy-pie-chart {
+    display: inline-block;
+    position: relative;
+}
+
+.easy-pie-chart-value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.easy-pie-chart-value:after {
+    content: "%";
+    font-size: 12px;
+}
+
+.easy-pie-chart-title {
+    display: block;
+    font-size: $font-size-sm;
+    margin-bottom: 0.5rem;
+}
+
+// To top
+.btn-back-to-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    text-align: center;
+    line-height: 40px;
+    background: $color-base-1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.btn-back-to-top:before {
+    font-family: "Ionicons";
+    content: "\f3d8";
+    display: block;
+    font-size: 1rem;
+    color: $color-base-text-1;
+}
+
+.btn-back-to-top.back-to-top-fade-out,
+.btn-back-to-top.back-to-top-is-visible,
+.no-touch .btn-back-to-top:hover {
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.btn-back-to-top.back-to-top-is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-back-to-top.back-to-top-fade-out {
+    opacity: 0.8;
+}
+
+.no-touch .btn-back-to-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+    .btn-back-to-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .btn-back-to-top {
+        height: 40px;
+        width: 40px;
+        right: 30px;
+        bottom: 30px;
+        line-height: 40px;
+    }
+}
+// Instafeed
+
+.instafeed [class^=col-] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.instafeed img {
+    margin-bottom: 20px;
+}
+
+.instafeed.row-no-padding img {
+    margin-bottom: 0;
+}
+
+// Paraxify
+.paraxify {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Stickyfill */
+.stickyfill {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.stickyfill:before,
+.stickyfill:after {
+    content: '';
+    display: table;
+}

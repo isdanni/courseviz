@@ -1,0 +1,698 @@
+.view {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.view--rounded {
+    border-radius: $card-border-radius;
+}
+.view--circle {
+    border-radius: 100%;
+}
+.view--circle img {
+    border-radius: 100% !important;
+}
+.view .content,
+.view .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.view .mask {
+    //background-color: rgba(red($hover-effect-mask-bg), green($hover-effect-mask-bg), blue($hover-effect-mask-bg), 0.85);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.view:hover .mask {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.view img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+.view h2 {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    background: rgba(red($color-base-1), green($color-base-1), blue($color-base-1), 0.8);
+    color: $color-base-text-1;
+    margin: 20px 0 0;
+    font-size: $font-size-h5;
+    font-weight: 500;
+}
+.view p {
+    font-size: $font-size-sm;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center;
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
+}
+.view a.info:hover {
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+}
+.view .view-buttons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.view .view-buttons-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: $spacer;
+}
+.view .view-buttons .icon {
+    font-size: 32px;
+}
+.view .view-buttons .icon-lg {
+    font-size: 64px;
+}
+/* EFFECT 1 */
+.view-first img {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.view-first .mask {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.view-first p {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.view-first:hover img {
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+.view-first a.info {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.view-first:hover a.info,
+.view-first:hover h2,
+.view-first:hover p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+.view-first:hover p {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+/* EFFECT 2 */
+.view-second img {
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+.view-second .mask {
+    //background-color: rgba(red($color-base-1), green($color-base-1), blue($color-base-1), 1);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.view-second h2 {
+    //background: rgba(red(@colorBase-2), green(@colorBase-2), blue(@colorBase-2), 1);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.view-second p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.view-second a.info {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.view-second:hover img {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    // -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    // filter: alpha(opacity=0);
+    // opacity: 0;
+}
+.view-second:hover a.info,
+.view-second:hover h2,
+.view-second:hover p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+/* EFFECT 3 */
+.view-third img {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.view-third .mask {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: translate(460px, -100px) rotate(180deg);
+    -moz-transform: translate(460px, -100px) rotate(180deg);
+    -o-transform: translate(460px, -100px) rotate(180deg);
+    -ms-transform: translate(460px, -100px) rotate(180deg);
+    transform: translate(460px, -100px) rotate(180deg);
+    -webkit-transition: all 0.2s 0.4s ease-in-out;
+    -moz-transition: all 0.2s 0.4s ease-in-out;
+    -o-transition: all 0.2s 0.4s ease-in-out;
+    -ms-transition: all 0.2s 0.4s ease-in-out;
+    transition: all 0.2s 0.4s ease-in-out;
+}
+.view-third h2 {
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.view-third p {
+    -webkit-transform: translateX(300px) rotate(90deg);
+    -moz-transform: translateX(300px) rotate(90deg);
+    -o-transform: translateX(300px) rotate(90deg);
+    -ms-transform: translateX(300px) rotate(90deg);
+    transform: translateX(300px) rotate(90deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.view-third a.info {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.view-third:hover .mask {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+.view-third:hover h2 {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+.view-third:hover p {
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+.view-third:hover a.info {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+/* EFFECT 4 */
+.view-fourth img {
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+    -moz-transition: all 0.4s ease-in-out 0.2s;
+    -o-transition: all 0.4s ease-in-out 0.2s;
+    -ms-transition: all 0.4s ease-in-out 0.2s;
+    transition: all 0.4s ease-in-out 0.2s;
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.view-fourth .mask {
+    background-color: rgba(red($hover-effect-mask-bg), green($hover-effect-mask-bg), blue($hover-effect-mask-bg), 1);
+    -webkit-transform: scale(0) rotate(-180deg);
+    -moz-transform: scale(0) rotate(-180deg);
+    -o-transform: scale(0) rotate(-180deg);
+    -ms-transform: scale(0) rotate(-180deg);
+    transform: scale(0) rotate(-180deg);
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.view-fourth h2 {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.view-fourth p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.view-fourth a.info {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.view-fourth:hover .mask {
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.view-fourth:hover img {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.view-fourth:hover a.info,
+.view-fourth:hover h2,
+.view-fourth:hover p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+/* EFFECT 5 */
+.view-fifth img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.view-fifth .mask {
+    background-color: rgba(red($hover-effect-mask-bg), green($hover-effect-mask-bg), blue($hover-effect-mask-bg), 1);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.view-fifth h2 {
+    background: rgba(red($color-base-1), green($color-base-1), blue($color-base-1), 1);
+}
+.view-fifth p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.view-fifth:hover .mask {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+}
+.view-fifth:hover img {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.view-fifth:hover p {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+/* EFFECT 6 */
+.view-sixth .mask {
+    top: -200px;
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out 0.5s;
+    -moz-transition: all 0.3s ease-out 0.5s;
+    -o-transition: all 0.3s ease-out 0.5s;
+    -ms-transition: all 0.3s ease-out 0.5s;
+    transition: all 0.3s ease-out 0.5s;
+}
+.view-sixth h2 {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all 0.2s ease-in-out 0.1s;
+    -moz-transition: all 0.2s ease-in-out 0.1s;
+    -o-transition: all 0.2s ease-in-out 0.1s;
+    -ms-transition: all 0.2s ease-in-out 0.1s;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+.view-sixth p {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all 0.2s ease-in-out 0.2s;
+    -moz-transition: all 0.2s ease-in-out 0.2s;
+    -o-transition: all 0.2s ease-in-out 0.2s;
+    -ms-transition: all 0.2s ease-in-out 0.2s;
+    transition: all 0.2s ease-in-out 0.2s;
+}
+.view-sixth a.info {
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all 0.2s ease-in-out 0.3s;
+    -moz-transition: all 0.2s ease-in-out 0.3s;
+    -o-transition: all 0.2s ease-in-out 0.3s;
+    -ms-transition: all 0.2s ease-in-out 0.3s;
+    transition: all 0.2s ease-in-out 0.3s;
+}
+.view-sixth:hover .mask {
+    -ms-filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    top: 0;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-animation: bounceY 0.9s linear;
+    -moz-animation: bounceY 0.9s linear;
+    -ms-animation: bounceY 0.9s linear;
+    animation: bounceY 0.9s linear;
+}
+.view-sixth:hover h2 {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+.view-sixth:hover p {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.view-sixth:hover a.info {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+}
+@keyframes bounceY {
+    0% {
+        transform: translateY(-205px);
+    }
+    40% {
+        transform: translateY(-100px);
+    }
+    65% {
+        transform: translateY(-52px);
+    }
+    82% {
+        transform: translateY(-25px);
+    }
+    92% {
+        transform: translateY(-12px);
+    }
+    100%,
+    55%,
+    75%,
+    87%,
+    97% {
+        transform: translateY(0px);
+    }
+}
+@-moz-keyframes bounceY {
+    0% {
+        -moz-transform: translateY(-205px);
+    }
+    40% {
+        -moz-transform: translateY(-100px);
+    }
+    65% {
+        -moz-transform: translateY(-52px);
+    }
+    82% {
+        -moz-transform: translateY(-25px);
+    }
+    92% {
+        -moz-transform: translateY(-12px);
+    }
+    100%,
+    55%,
+    75%,
+    87%,
+    97% {
+        -moz-transform: translateY(0px);
+    }
+}
+@-webkit-keyframes bounceY {
+    0% {
+        -webkit-transform: translateY(-205px);
+    }
+    40% {
+        -webkit-transform: translateY(-100px);
+    }
+    65% {
+        -webkit-transform: translateY(-52px);
+    }
+    82% {
+        -webkit-transform: translateY(-25px);
+    }
+    92% {
+        -webkit-transform: translateY(-12px);
+    }
+    100%,
+    55%,
+    75%,
+    87%,
+    97% {
+        -webkit-transform: translateY(0px);
+    }
+}

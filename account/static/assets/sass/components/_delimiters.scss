@@ -1,0 +1,701 @@
+.delimiter {
+    display: block;
+    margin-top: 20px;
+}
+
+.delimiter.delimiter--fixed-width {
+    width: 130px !important;
+    margin: auto;
+}
+// Delimiter: STYLE 1
+
+.delimiter--style-1 {
+    border-bottom: 1px solid $border-color-base;
+    margin: 30px 0;
+    position: relative;
+}
+
+.delimiter--style-1-v2 {
+    border: 1px dotted $border-color-base;
+}
+
+.delimiter--style-1 .delimiter-title {
+    width: 200px;
+    position: relative;
+    top: 25px;
+    background: #fff;
+    border: 2px solid $border-color-base;
+    color: $color-gray-light;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+    z-index: 3;
+    cursor: default;
+}
+
+.delimiter--style-1 .delimiter-title h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    font-size: $font-size-h6;
+    font-weight: 600;
+}
+
+.delimiter--style-1 .divider-title-wrapper::before {
+    content: "";
+    width: 280px;
+    height: 50px;
+    position: absolute;
+    margin-left: -140px;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    z-index: 2;
+}
+// Delimiter: STYLE 2
+
+.delimiter--style-2 {
+    border-bottom: 2px solid darken($border-color-base, 80%);
+    position: relative;
+}
+
+.delimiter--style-2:before {
+    content: "";
+    width: 160%;
+    position: absolute;
+    left: -30%;
+    top: -4px;
+    border-top: 2px solid $border-color-base;
+}
+
+.delimiter--style-2 .delimiter-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    left: 50%;
+    top: -18px;
+    margin-left: -18px;
+    background: $color-white;
+    font-size: 20px;
+}
+//
+
+.delimiter-left-thick--style-1 {
+    border-left: 4px solid $color-base-1;
+}
+// Short delimiters
+
+.sd-1 {
+    padding: 14px 0;
+    display: block;
+    position: relative;
+}
+
+.sd-1:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: $color-base-1;
+}
+
+.sd-light:before {
+    background: $color-gray-light;
+}
+
+.sd-dark:before {
+    background: $color-gray-dark;
+}
+
+.sd-base-1:before {
+    background: $color-base-1;
+}
+
+.sd-thick-3px:before {
+    height: 3px!important;
+}
+
+.sd-sm:before {
+    width: 40px;
+}
+
+.sd-md:before {
+    width: 60px;
+}
+
+.sd-lg:before {
+    width: 90px;
+}
+
+.sd-center.sd-sm:before {
+    left: 50%;
+    margin-left: -20px;
+}
+
+.sd-center.sd-md:before {
+    left: 50%;
+    margin-left: -30px;
+}
+
+.sd-center.sd-lg:before {
+    left: 50%;
+    margin-left: -45px;
+}
+// Vertical delimiters
+
+.vd--1,
+.vd--2 {
+    display: block;
+    height: 100px;
+    width: 1px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    background-color: $color-base-1;
+}
+
+.vd--2 {
+    height: 140px;
+}
+
+.vd--2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: 1px;
+    transform: translateX(-50%);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.vd--2[data-position="top"]::before {
+    top: 0;
+}
+
+.vd--2[data-position="bottom"]::before {
+    bottom: 0;
+}
+// Versus delimtier
+
+.vs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.vs--1 {
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+}
+// Or delimiter
+
+.or {
+    display: block;
+    margin: 2rem 0;
+}
+
+.or--1 {
+    position: relative;
+}
+
+.or--1:after,
+.or--1:before {
+    content: '';
+    position: absolute;
+    width: calc(50% - 30px);
+    height: 30px;
+    border-bottom: 1px dashed $border-color-base;
+}
+
+.or--1:before {
+    left: 0;
+}
+
+.or--1:after {
+    right: 0;
+}
+
+.or--1 > span {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: $font-size-sm;
+    color: darken($border-color-base, 10%);
+}
+// separators
+
+/* Triangles */
+
+.ss-style-triangles::after,
+.ss-style-triangles::before {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-triangles::before {
+    top: -50px;
+    background: #2980b9;
+}
+
+.ss-style-triangles::after {
+    bottom: -50px;
+    z-index: 10;
+    background: inherit;
+}
+/* Double Diagonal line */
+.ss-style-doublediagonal {
+    z-index: 1;
+    padding-top: 6em;
+    background: #2072a7;
+}
+
+.ss-style-doublediagonal::after,
+.ss-style-doublediagonal::before {
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 75%;
+    background: inherit;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+    height: 50%;
+    background: #116094;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -webkit-transform-origin: 3% 0;
+    transform-origin: 3% 0;
+}
+/* Half Circle */
+
+.ss-style-halfcircle::after,
+.ss-style-halfcircle::before {
+    left: 50%;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: inherit;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.ss-style-halfcircle::before {
+    top: -50px;
+}
+
+.ss-style-halfcircle::after {
+    bottom: -50px;
+}
+/* Big Triangle */
+
+svg#bigTriangleColor {
+    pointer-events: none;
+}
+
+#bigTriangleColor path {
+    fill: #3498db;
+    stroke: #3498db;
+    stroke-width: 2;
+}
+/* Multiple Triangles */
+
+.ss-style-multitriangles::after,
+.ss-style-multitriangles::before {
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-multitriangles::before {
+    top: -25px;
+    background: inherit;
+    box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+
+.ss-style-multitriangles::after {
+    bottom: -25px;
+    z-index: 10;
+    background: inherit;
+    box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+/* Rounded corners */
+
+.ss-style-roundedcorners::before {
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    border-radius: 0 0 60px 60px;
+    background: inherit;
+}
+/* Rounded center split and bottom rounded */
+
+.ss-style-roundedsplit {
+    padding-top: 7em;
+    border-radius: 0 0 80px 80px;
+}
+
+.ss-style-roundedsplit::after,
+.ss-style-roundedsplit::before {
+    top: -70px;
+    left: 0;
+    z-index: 10;
+    width: 50%;
+    height: 70px;
+    background: inherit;
+}
+
+.ss-style-roundedsplit::before {
+    border-radius: 0 80px 0 0;
+}
+
+.ss-style-roundedsplit::after {
+    left: 50%;
+    border-radius: 80px 0 0 0;
+}
+/* Inverted rounded corners */
+
+.ss-style-invertedrounded {
+    margin-bottom: 90px;
+    padding: 13em 10% 10em;
+    border-radius: 0 0 0 90px;
+}
+
+.ss-style-invertedrounded::after,
+.ss-style-invertedrounded::before {
+    left: 0;
+    z-index: -1;
+    height: 90px;
+    background: #3498db;
+}
+
+.ss-style-invertedrounded::before {
+    top: 100%;
+    width: 100%;
+    border-radius: 0 90px 0 0;
+}
+
+.ss-style-invertedrounded::after {
+    bottom: 0;
+    z-index: -1;
+    width: 50%;
+}
+/* Boxes */
+
+.ss-style-boxes {
+    padding-top: 4em;
+    padding-bottom: 13em;
+}
+
+.ss-style-boxes::before {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: -webkit-gradient(linear, 100% 0, 0 100%, color-stop(0.5, #3498db), color-stop(0.5, #2980b9));
+    background-image: linear-gradient(to right, #3498db 50%, #2980b9 50%);
+    -webkit-background-size: 130px 100%;
+    background-size: 130px 100%;
+}
+/* Zig Zag (3d up and simple down) */
+
+.ss-style-zigzag::after,
+.ss-style-zigzag::before {
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    height: 90px;
+    background-size: 50px 100%;
+}
+
+.ss-style-zigzag::before {
+    top: -90px;
+    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, transparent), color-stop(0.25, #3498db));
+    background-image: linear-gradient(315deg, #3093d5 25%, transparent 25%), linear-gradient(45deg, #3498db 25%, transparent 25%);
+    background-position: 50%;
+}
+
+.ss-style-zigzag::after {
+    top: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #3498db), color-stop(0.25, #2980b9));
+    background-image: linear-gradient(135deg, #3498db 25%, transparent 25%), linear-gradient(225deg, #3498db 25%, transparent 25%);
+    background-position: 50%;
+}
+/* Edges */
+
+.ss-style-roundedges {
+    padding-bottom: 16em;
+}
+
+.ss-style-roundedges::after,
+.ss-style-roundedges::before {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #2980b9;
+    top: -100px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.ss-style-roundedges::before {
+    left: -100px;
+}
+
+.ss-style-roundedges::after {
+    right: -100px;
+}
+/* Slit */
+
+.ss-style-slit {
+    padding-top: 5em;
+}
+
+.ss-style-slit::after,
+.ss-style-slit::before {
+    width: 50.5%;
+    width: -webkit-calc(50% + 10px);
+    width: -moz-calc(50% + 10px);
+    width: calc(50% + 10px);
+    height: 160px;
+    background: #2980b9;
+    top: -160px;
+}
+
+.ss-style-slit::before {
+    left: -20px;
+    -webkit-transform: skewX(10deg);
+    transform: skewX(10deg);
+    box-shadow: -10px -20px #3192d3;
+}
+
+.ss-style-slit::after {
+    right: -20px;
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    box-shadow: 10px -20px #3192d3;
+}
+/* Big half circle */
+
+#bigHalfCircle path {
+    fill: #3498db;
+    stroke: #3498db;
+}
+/* Big triangle with shadow */
+#trianglePath1 {
+    fill: #3498db;
+    stroke: #3498db;
+}
+
+#trianglePath2 {
+    fill: #2072a7;
+    stroke: #2072a7;
+}
+/* Inclined Zig Zag */
+
+.ss-style-inczigzag::after,
+.ss-style-inczigzag::before {
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-size: 100px 100%;
+}
+
+.ss-style-inczigzag::before {
+    top: 0;
+    background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #2980b9), color-stop(0.5, #3498db));
+    background-image: linear-gradient(15deg, #3498db 50%, #2980b9 50%);
+}
+
+.ss-style-inczigzag::after {
+    bottom: 0;
+    background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, #3498db), color-stop(0.5, #2980b9));
+    background-image: linear-gradient(15deg, #2980b9 50%, #3498db 50%);
+}
+/* Castle */
+
+.ss-style-castle::before {
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-size: 200px 100%;
+    top: 0;
+    background-image: -webkit-linear-gradient(40deg, #3498db 50%, #2980b9 50%);
+    background-image: linear-gradient(40deg, #3498db 50%, #2980b9 50%);
+}
+/* Alternative slit with inner shadow */
+
+#slitPath1 {
+    fill: #3498db;
+    stroke: red;
+    stroke-width: 0;
+}
+
+#slitPath2,
+#slitPath3 {
+    fill: #2072a7;
+}
+/* Folded corner */
+
+.ss-style-foldedcorner::after,
+.ss-style-foldedcorner::before {
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.ss-style-foldedcorner::before {
+    right: 0;
+    background-image: -webkit-linear-gradient(top left, #37a2ea 50%, #3498db 50%);
+    background-image: linear-gradient(315deg, #3498db 50%, #37a2ea 50%);
+}
+
+.ss-style-foldedcorner::after {
+    right: 100px;
+    background-image: -webkit-linear-gradient(top left, transparent 50%, #236fa1 50%);
+    background-image: linear-gradient(315deg, #236fa1 50%, transparent 50%);
+}
+/* Dots */
+
+.ss-style-dots::before {
+    bottom: 20px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #2072a7;
+    box-shadow: 30px 0 #2072a7, -30px 0 #2072a7;
+}
+/* Double Line */
+
+.ss-style-doubleline::before {
+    bottom: 30px;
+    width: 140px;
+    height: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #2072a7;
+    box-shadow: 0 30px 0 #2072a7;
+}
+/* Cross */
+
+.ss-style-cross {
+    padding-bottom: 15em;
+}
+
+.ss-style-cross::after,
+.ss-style-cross::before {
+    background: #2072a7;
+    bottom: 70px;
+    width: 200px;
+    height: 2px;
+    left: 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.ss-style-cross::before {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-cross::after {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+}
+/* Stamp */
+
+#stamp path {
+    fill: #3498db;
+    stroke: #3498db;
+    /* avoid gap in FF */
+}
+/* Clouds */
+
+#clouds path {
+    fill: #ecf0f1;
+    stroke: #ecf0f1;
+}
+// Advanced separators
+
+.shape-container {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    transform: translateZ(0);
+    overflow: hidden;
+}
+
+.shape-container[data-shape-position="top"] {
+    top: 0;
+    bottom: auto;
+    transform: rotate(180deg);
+}
+
+.shape-container[data-shape-position="bottom"] {
+    top: auto;
+    bottom: 0;
+}
+
+.shape-container .shape-item {
+    fill: #FFF;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+}
+
+.shape-container[data-shape-fill="primary"] .shape-item {
+    fill: $color-base-1;
+}
+
+.shape-container[data-shape-fill="secondary"] .shape-item {
+    fill: $color-base-2;
+}
+
+.shape-container[data-shape-style="opaque_waves_2"] svg path:nth-child(1) {
+    opacity: 0.2;
+}
+
+.shape-container[data-shape-style="opaque_waves_2"] svg path:nth-child(2) {
+    opacity: 0.4;
+}
+@media only screen and (max-width: 767px) {
+    .shape-container .shape-item {
+        height: 33%;
+    }
+}

@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+@at-root {
+     @-ms-viewport{
+        width: device-width;
+    }
+}
+html {
+    font-size: $font-size-root;
+    -ms-overflow-style: scrollbar;
+}
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+// Iframe
+iframe {
+    border: 0;
+}
+
+// checkbox
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}

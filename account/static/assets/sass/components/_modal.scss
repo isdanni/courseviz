@@ -1,0 +1,51 @@
+.modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $card-border-color;
+}
+
+.modal-header > .heading {
+    margin-bottom: 0;
+}
+
+.modal-body {
+    position: relative;
+    padding: 1rem 1.5rem;
+}
+
+.modal-content {
+    position: relative;
+    background-color: $card-bg;
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.modal-backdrop.in {
+    opacity: 0.3;
+}
+
+// Modal colors
+.modal[data-modal-color],
+.modal[data-modal-color] .modal-footer .btn-link,
+.modal[data-modal-color] .modal-title {
+    color: #fff;
+}
+.modal[data-modal-color=base-1] .modal-content {
+    background-color: $color-base-1;
+}
+.modal[data-modal-color=base-2] .modal-content {
+    background-color: $color-base-2;
+}
+.modal[data-modal-color=base-3] .modal-content {
+    background-color: $color-base-3;
+}
+.modal[data-modal-color=base-4] .modal-content {
+    background-color: $color-base-4;
+}
+.modal[data-modal-color=base-5] .modal-content {
+    background-color: $color-base-5;
+}
+
+.modal[data-modal-color=dark] .modal-content {
+    background-color: $color-dark;
+}

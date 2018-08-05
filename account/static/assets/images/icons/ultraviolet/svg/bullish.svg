@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" width="40" height="40">
+<g>
+	<rect x="32.5" y="13.5" style="fill:#DFF0FE;" width="4" height="25"/>
+	<g>
+		<path style="fill:#4788C7;" d="M36,14v24h-3V14H36 M37,13h-5v26h5V13L37,13z"/>
+	</g>
+</g>
+<g>
+	<rect x="20.5" y="18.5" style="fill:#DFF0FE;" width="4" height="20"/>
+	<g>
+		<path style="fill:#4788C7;" d="M24,19v19h-3V19H24 M25,18h-5v21h5V18L25,18z"/>
+	</g>
+</g>
+<g>
+	<rect x="14.5" y="25.5" style="fill:#DFF0FE;" width="4" height="13"/>
+	<g>
+		<path style="fill:#4788C7;" d="M18,26v12h-3V26H18 M19,25h-5v14h5V25L19,25z"/>
+	</g>
+</g>
+<g>
+	<rect x="8.5" y="22.5" style="fill:#DFF0FE;" width="4" height="16"/>
+	<g>
+		<path style="fill:#4788C7;" d="M12,23v15H9V23H12 M13,22H8v17h5V22L13,22z"/>
+	</g>
+</g>
+<g>
+	<rect x="2.5" y="27.5" style="fill:#DFF0FE;" width="4" height="11"/>
+	<g>
+		<path style="fill:#4788C7;" d="M6,28v10H3V28H6 M7,27H2v12h5V27L7,27z"/>
+	</g>
+</g>
+<g>
+	<rect x="26.5" y="21.5" style="fill:#DFF0FE;" width="4" height="17"/>
+	<g>
+		<path style="fill:#4788C7;" d="M30,22v16h-3V22H30 M31,21h-5v18h5V21L31,21z"/>
+	</g>
+</g>
+<polyline style="fill:none;stroke:#4788C7;stroke-linecap:round;stroke-miterlimit:10;" points="35,4 28,9 24,7 16,13 12,11   3.5,17.5 "/>
+<g>
+	<polygon style="fill:#4788C7;" points="31,2 37,2 37,8  "/>
+</g>
+</svg>

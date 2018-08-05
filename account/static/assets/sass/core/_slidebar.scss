@@ -1,0 +1,201 @@
+.st-container,
+.st-content,
+.st-pusher {
+    height: 100%;
+}
+.st-content {
+    background: transparent;
+}
+.st-content,
+.st-content-inner {
+    position: relative;
+}
+.st-container {
+    position: relative;
+    overflow: hidden;
+}
+.st-pusher {
+    position: relative;
+    right: 0;
+    z-index: 99;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+.st-pusher::after {
+    z-index: 1100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+.st-menu-open .st-pusher::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.st-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    visibility: hidden;
+    width: 300px;
+    height: 100%;
+    overflow-y: scroll;
+    background: $slidebar-bg;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border-left: 1px solid $slidebar-border-color;
+}
+.st-menu::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+.st-menu-open .st-menu::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+.st-menu-open {
+    overflow: hidden;
+}
+// Slidebar content
+.st-menu::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+}
+.st-menu-title {
+    font-size: $font-size-h6;
+    color: $slidebar-heading-color;
+    font-weight: 600;
+    margin: 10px 0 0;
+    padding: 15px 20px 10px;
+}
+
+// Slidebar list
+.st-profile {
+    background-image: url('../images/patterns/pattern-1.png');
+    background-repeat: repeat;
+    padding: $spacer * 2;
+}
+.st-profile-user-wrapper {
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+}
+.profile-user-image {
+    display: table-cell;
+    padding-right: $spacer;
+    width: 72px;
+}
+.profile-user-image > img {
+    max-width: 100%;
+}
+.profile-user-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.st-profile .profile-user-name {
+    color: $color-base-1;
+    font-size: $font-size-h6;
+    font-weight: 600;
+}
+.st-profile .profile-user-email {
+    font-weight: 400;
+    font-size: $font-size-sm;
+    color: $slidebar-color;
+}
+.st-menu-title {
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    color: $slidebar-heading-color;
+}
+
+.st-menu-list > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.st-menu-list > ul > li {
+    font-size: 13px;
+    color: $slidebar-color;
+    font-weight: 500;
+}
+.st-menu-list > ul > li > a {
+    display: block;
+    padding: 0.3125rem ($spacer * 2);
+    color: $slidebar-color;
+    font-weight: 500;
+    -webkit-transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.st-menu-list > ul > li > a:hover {
+    color: $slidebar-color-hover;
+}
+.st-menu-list > ul > li > a > i {
+    margin-right: $spacer;
+    display: inline-block;
+    font-size: 20px;
+    width: 20px;
+    position: relative;
+    top: 4px;
+}
+
+// .st-menu ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+// .st-menu ul > li > a {
+//     display: block;
+//     padding: 6px 20px;
+//     color: $slidebar-color;
+//     letter-spacing: 1px;
+//     font-weight: 400;
+//     -webkit-transition: background 0.3s, box-shadow 0.3s;
+//     transition: background 0.3s, box-shadow 0.3s;
+// }
+// .st-menu ul > li > a:hover {
+//     color: $slidebar-color-hover;
+// }
+// .st-menu ul > li > a > i {
+//     margin-right: 5px;
+// }
+// Slidebar effects
+.st-effect-1.st-menu-open .st-pusher {
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
+}
+.st-effect-1.st-menu-open .st-pusher > .st-content {
+    overflow: hidden;
+}
+.st-effect-1.st-menu {
+    z-index: 1;
+}
+.st-effect-1.st-menu-open .st-effect-1.st-menu {
+    visibility: visible;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+.st-effect-1.st-menu::after {
+    display: none;
+}

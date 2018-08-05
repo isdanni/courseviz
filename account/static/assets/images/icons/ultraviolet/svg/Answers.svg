@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" width="40" height="40">
+<g>
+	<polygon style="fill:#B6DCFE;" points="5.5,38.5 5.5,4.5 22.793,4.5 31.5,13.207 31.5,38.5  "/>
+	<g>
+		<path style="fill:#4788C7;" d="M22.586,5L31,13.414V38H6V5H22.586 M23,4H5v35h27V13L23,4L23,4z"/>
+	</g>
+</g>
+<g>
+	<polygon style="fill:#FFFFFF;" points="8.5,35.5 8.5,1.5 25.793,1.5 34.5,10.207 34.5,35.5  "/>
+	<g>
+		<path style="fill:#4788C7;" d="M25.586,2L34,10.414V35H9V2H25.586 M26,1H8v35h27V10L26,1L26,1z"/>
+	</g>
+</g>
+<g>
+	<polygon style="fill:#DFF0FE;" points="25.5,10.5 25.5,1.5 25.793,1.5 34.5,10.207 34.5,10.5  "/>
+	<g>
+		<path style="fill:#4788C7;" d="M26,2.414L33.586,10H26V2.414 M26,1h-1v10h10v-1L26,1L26,1z"/>
+	</g>
+</g>
+<circle style="fill:#4788C7;" cx="21.5" cy="27.5" r="1.5"/>
+<rect x="20" y="13" style="fill:#4788C7;" width="3" height="11"/>
+</svg>

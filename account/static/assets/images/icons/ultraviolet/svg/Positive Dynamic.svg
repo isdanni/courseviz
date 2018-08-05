@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" width="40" height="40">
+<g>
+	<rect x="31.5" y="3.5" style="fill:#DFF0FE;" width="7" height="35"/>
+	<g>
+		<path style="fill:#4788C7;" d="M38,4v34h-6V4H38 M39,3h-8v36h8V3L39,3z"/>
+	</g>
+</g>
+<g>
+	<rect x="21.5" y="17.5" style="fill:#DFF0FE;" width="7" height="21"/>
+	<g>
+		<path style="fill:#4788C7;" d="M28,18v20h-6V18H28 M29,17h-8v22h8V17L29,17z"/>
+	</g>
+</g>
+<g>
+	<rect x="11.5" y="24.5" style="fill:#DFF0FE;" width="7" height="14"/>
+	<g>
+		<path style="fill:#4788C7;" d="M18,25v13h-6V25H18 M19,24h-8v15h8V24L19,24z"/>
+	</g>
+</g>
+<g>
+	<rect x="1.5" y="30.5" style="fill:#DFF0FE;" width="7" height="8"/>
+	<g>
+		<path style="fill:#4788C7;" d="M8,31v7H2v-7H8 M9,30H1v9h8V30L9,30z"/>
+	</g>
+</g>
+<g>
+	<path style="fill:#4788C7;" d="M15.464,6.95L4.414,18C4.024,18.391,3.391,18.391,3,18l0,0c-0.391-0.391-0.391-1.024,0-1.414   l11.05-11.05L10.515,2H19v8.485L15.464,6.95z"/>
+</g>
+</svg>

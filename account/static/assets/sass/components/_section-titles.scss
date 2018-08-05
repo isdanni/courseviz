@@ -1,0 +1,182 @@
+// Section title - General styling
+.section-title {
+    margin-bottom: $spacer * 1.5;
+    position: relative;
+}
+.section-title:after,
+.section-title:before { 
+    content: "";
+    display: table;
+}
+.section-title:before {
+    content: " ";
+    display: table;
+}
+.section-title.text-center,
+.section-title.text-sm-center,
+.section-title.text-md-center,
+.section-title.text-lg-center,
+.section-title.text-xl-center {
+    margin-bottom: $spacer * 4;
+}
+.section-title .section-title-inner {
+    margin: 0 0 5px 0;
+    font-family: $font-family-alt;
+    font-size: $section-title-font-size;
+    font-weight: $section-title-font-weight;
+    text-transform: $section-title-text-transform;
+    position: relative;
+    z-index: 2;
+    color: $section-title-color;
+}
+.section-title-inverse .section-title-inner,
+.section-title-inverse .heading {
+    color: $section-title-color-inverse;
+}
+// Section title delimiter - General styling
+.section-title .section-title-delimiter {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+.section-title .section-title-delimiter::before {
+    background: $section-title-delimiter-border-color;
+}
+.section-title-inverse .section-title-delimiter::before {
+    background: $section-title-delimiter-border-color-inverse;
+}
+// Section title - STYLE 1
+.section-title--style-1 .section-title-delimiter::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: $section-title-delimiter-width;
+    height: $section-title-delimiter-border-width;
+}
+.section-title--style-1.text-center .section-title-delimiter::before,
+.section-title--style-1.text-sm-center .section-title-delimiter::before,
+.section-title--style-1.text-md-center .section-title-delimiter::before,
+.section-title--style-1.text-lg-center .section-title-delimiter::before,
+.section-title--style-1.text-xl-center .section-title-delimiter::before {
+    margin-bottom: -$spacer;
+    left: 50%;
+    margin-left: -($section-title-delimiter-width * 1.5) / 2;
+    width: $section-title-delimiter-width * 1.5;
+}
+@media(min-width: 768px) {
+    .section-title--style-1.text-sm-left .section-title-delimiter::before {
+        left: 0;
+        margin-left: 0;
+        width: $section-title-delimiter-width;
+    }
+}
+
+@media(min-width: 992px) {
+    .section-title--style-1.text-md-left .section-title-delimiter::before {
+        left: 0;
+        margin-left: 0;
+        width: $section-title-delimiter-width;
+    }
+}
+
+@media(min-width: 1201px) {
+    .section-title--style-1.text-lg-left .section-title-delimiter::before {
+        left: 0;
+        margin-left: 0;
+        width: $section-title-delimiter-width;
+    }
+}
+
+.section-title--style-1 .text-muted {
+    display: block;
+    margin: 0.5rem 0;
+    text-transform: none;
+}
+.section-title--style-1 .shadow-subtitle {
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: $font-family-alt;
+    z-index: 1;
+}
+.section-title--style-1 .underlay-subtitle {
+    color: $color-base-1;
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: $font-family-alt;
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.section-title--style-1 .underlay-subtitle--top + .section-title-inner {
+    margin-top: -36px;
+}
+
+.section-title--style-1 .underlay-subtitle--bottom {
+    top: 10%;
+}
+// Section title - STYLE 2
+.section-title--style-2 {
+	position: relative;
+}
+.section-title--style-2.text-center .section-title-inner {
+    position: relative;
+    cursor: default;
+}
+.section-title--style-2.text-center .section-title-inner:before {
+    content: "";
+    display: block;
+	width: 60px;
+    height: 70px;
+	position: relative;
+	top: 22px;
+	background: transparent;
+    border: 3px solid;
+	margin: auto;
+	z-index: 3;
+    border-color: $color-gray-dark;
+}
+.section-title--style-2.section-title-inverse .section-title-inner:before {
+    border-color: $color-gray-lighter;
+}
+
+.section-title--style-2.text-center .section-title-inner > span {
+    display: inline-block;
+    position: relative;
+    top: -32px;
+    height: 36px;
+    line-height: 36px;
+    z-index: 4;
+    background: $section-color-1;
+}
+.section-title--style-2.text-center .section-title-inner.heading-1 > span {
+    top: -38px;
+}
+.section-title--style-2.text-center .section-title-inner.heading-3 > span {
+    top: -31px;
+}
+.section-title--style-2.text-center .section-title-inner.heading-4 > span {
+    top: -31px;
+}
+.sct-color-2 .section-title--style-2.text-center .section-title-inner > span {
+    background: $section-color-2;
+}
+.sct-color-3 .section-title--style-2.text-center .section-title-inner > span {
+    background: $section-color-3;
+}
+.bg-base-1 .section-title--style-2.text-center .section-title-inner > span {
+    background: $color-base-1;
+}
+
+.section-title--style-2.section-title-inverse .section-title-inner > span {
+    background: $color-gray-dark;
+}
+
+.section-title--style-2 .section-title-inner .heading {
+    margin: 0;
+}

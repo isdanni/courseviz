@@ -1,0 +1,71 @@
+// Milestone counter
+.milestone-counter {
+    margin: 30px 0;
+}
+
+.milestone-counter .milestone-count {
+    font-size: 60px;
+    font-family: $font-family-alt;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.milestone-counter .milestone-count.milestone-count-sm {
+    font-size: 52px !important;
+}
+
+.milestone-counter .milestone-count.milestone-count-xs {
+    font-size: 32px !important;
+}
+
+.milestone-counter .milestone-info {
+    font-family: $font-family-alt;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.milestone-counter .milestone-icon {
+    display: block;
+    //text-align: center;
+    line-height: 1;
+}
+
+.milestone-counter .milestone-icon .fa,
+.milestone-counter .milestone-icon .icon {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.milestone-counter .milestone-icon .icon:before {
+    line-height: 0;
+}
+
+.milestone-counter .milestone-delimiter {
+    display: block;
+    width: 60px;
+    margin-bottom: 14px;
+    border-bottom: 3px solid $color-base-1;
+    border-bottom: 3px solid $color-base-1;
+}
+
+.milestone-counter .milestone-delimiter:after,
+.milestone-counter .milestone-delimiter:before {
+    display: table;
+    content: "";
+    width: 100%;
+}
+
+.milestone-counter .milestone-delimiter:after {
+    clear: both;
+}
+@media(max-width: 767px) {
+    .milestone-counter {
+        margin-bottom: 60px;
+    }
+}

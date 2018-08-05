@@ -1,0 +1,664 @@
+.btn {
+    position: relative;
+    font-size: $btn-font-size;
+    font-family: $btn-font-family;
+    font-style: normal;
+    text-align: center;
+    border-radius: $btn-border-radius;
+    outline: none;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.btn-styled {
+    
+    font-weight: $btn-font-weight;
+    letter-spacing: $btn-letter-spacing;
+    text-transform: $btn-text-transform;
+    padding: 0.75rem 2rem;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+// Button sizes
+.btn-sm {
+    font-size: 0.7rem!important;
+}
+.btn-styled.btn-xl {
+    font-size: 1rem!important;
+    padding: 1rem 2.5rem !important;
+}
+.btn-styled.btn-lg {
+    font-size: 0.8rem!important;
+    padding: 1rem 2rem !important;
+}
+.btn-styled.btn-sm {
+    font-size: 0.6rem!important;
+    padding: 0.625rem 1rem !important;
+}
+.btn-styled.btn-xs {
+    font-size: 0.625rem!important;
+    padding: 0.5rem 0.75rem!important;
+}
+@media(max-width: 767px) {
+    .btn-xs-block {
+        width: 100%;
+    }
+}
+
+// Buttons with icons
+.btn-icon-left .icon,
+.btn-icon-left .fa {
+    margin-right: 0.625rem;
+}
+
+.btn-icon-right .icon,
+.btn-icon-right .fa {
+    margin-left: 0.625rem;
+}
+
+.btn-icon--2 {
+    position: relative;
+    padding-left: 40px!important;
+}
+.btn-icon--2 .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+// Button shapes
+.btn-square {
+    border-radius: 0px!important;
+}
+
+.btn-round {
+    border-radius: 8px!important;
+}
+
+.btn-circle {
+    border-radius: 10rem!important;
+}
+
+// Button styles
+.btn-shadow {
+    -webkit-box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8)!important;
+    -moz-box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8)!important;
+    box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8)!important;
+}
+
+.btn-italic {
+    font-style: italic!important;
+}
+
+.btn-disable-hover {
+    pointer-events: none!important;
+}
+@media(max-width: 767px) {
+    .btn-container {
+        margin-top: 2 * $spacer;
+    }
+}
+@media(max-width: 991px) {
+    .btn-container > .btn {
+        margin-bottom: $spacer;
+    }
+}
+@media(min-width: 992px) {
+    .btn-container > .btn {
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-container > .btn.btn-border-animated {
+        margin-right: $spacer * 3;
+    }
+
+    .btn-container > .btn:last-child {
+        margin-right: 0;
+    }
+}
+.btn-inline-links > a {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 0 5px;
+}
+.btn-inline-links > a:after {
+    content: "-";
+    position: absolute;
+    right: 0;
+    height: 20px;
+    color: $color-base-1;
+}
+.btn-inline-links > a:last-child:after {
+    content: "";
+}
+
+// Generating standard and bordered buttons using the base colors
+$btn-colors: $color-base-1, $color-base-2, $color-base-3, $color-base-4, $color-base-5;
+$btn-text-colors: $color-base-text-1, $color-base-text-2, $color-base-text-3, $color-base-text-4, $color-base-text-5;
+@for $i from 1 through length($btn-colors) {
+    .btn-base-#{$i} {
+        color: nth($btn-text-colors, $i);
+        background-color: nth($btn-colors, $i);
+        border: $btn-outline-border-width solid nth($btn-colors, $i);
+    }
+
+    .btn-base-#{$i}:active,
+    .btn-base-#{$i}.active,
+    .btn-base-#{$i}:focus,
+    .btn-base-#{$i}:hover {
+        background-color: darken(nth($btn-colors, $i), 10%);
+        color: nth($btn-text-colors, $i);
+    }
+    // Bordered (no bg) button styles
+    .btn-base-#{$i}.btn-outline {
+        background-color: transparent!important;
+        border-color: nth($btn-colors, $i)!important;
+        color: nth($btn-colors, $i)!important;
+    }
+
+    .btn-base-#{$i}.btn-outline:active,
+    .btn-base-#{$i}.btn-outline:focus,
+    .btn-base-#{$i}.btn-outline:hover {
+        background-color: nth($btn-colors, $i)!important;
+        border-color: nth($btn-colors, $i)!important;
+        color: nth($btn-text-colors, $i)!important;
+    }
+}
+
+.bg-base-1 .btn-base-1 {
+    background-color: darken($color-base-1, 10%);
+    border-color: darken($color-base-1, 10%);
+}
+.bg-base-1 .btn-base-1:active,
+.bg-base-1 .btn-base-1:focus,
+.bg-base-1 .btn-base-1:hover {
+    background-color: darken($color-base-1, 15%);
+    border-color: darken($color-base-1, 15%);
+}
+.bg-base-1 .btn-base-5 {
+    color: transparentize($color-base-1, 0.3);
+}
+.bg-base-1 .btn-base-5:hover {
+    color: $color-base-1;
+}
+// White button
+.btn-white {
+    color: $color-white-text;
+    background-color: $color-white;
+    border: $btn-outline-border-width solid $color-white;
+}
+
+.btn-white:active,
+.btn-white:focus,
+.btn-white:hover {
+    background-color: darken($color-white, 10%);
+    border-color: $color-white;
+    color: $color-white-text;
+}
+
+.btn-white.btn-outline {
+    background-color: transparent;
+    border-color: $color-white;
+    color: $color-white;
+}
+
+.btn-white.btn-outline:active,
+.btn-white.btn-outline:focus,
+.btn-white.btn-outline:hover {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-white-text;
+}
+
+// Gray-light
+.btn-gray-light {
+    color: $color-gray-lighter;
+    background-color: $color-gray-light;
+    border: $btn-outline-border-width solid $color-gray-light;
+}
+
+.btn-gray-light:active,
+.btn-gray-light:focus,
+.btn-gray-light:hover {
+    background-color: darken($color-gray-light, 10%);
+    border-color: $color-gray-light;
+    color: $color-gray-lighter;
+}
+
+.btn-gray-light.btn-outline {
+    background-color: transparent;
+    border-color: $color-gray-light;
+    color: $color-gray-light;
+}
+
+.btn-gray-light.btn-outline:active,
+.btn-gray-light.btn-outline:focus,
+.btn-gray-light.btn-outline:hover {
+    background-color: $color-gray-light;
+    border-color: $color-gray-light;
+    color: $color-gray-lighter;
+}
+
+// Gray-lighter
+.btn-gray-lighter {
+    color: $color-gray-dark;
+    background-color: $color-gray-lighter;
+    border: $btn-outline-border-width solid $color-gray-lighter;
+}
+
+.btn-gray-light:active,
+.btn-gray-light:focus,
+.btn-gray-light:hover {
+    background-color: darken($color-gray-lighter, 10%);
+    border-color: $color-gray-lighter;
+    color: $color-gray-dark;
+}
+
+.btn-gray-light.btn-outline {
+    background-color: transparent;
+    border-color: $color-gray-lighter;
+    color: $color-gray-lighter;
+}
+
+.btn-gray-light.btn-outline:active,
+.btn-gray-light.btn-outline:focus,
+.btn-gray-light.btn-outline:hover {
+    background-color: $color-gray-lighter;
+    border-color: $color-gray-lighter;
+    color: $color-gray-dark;
+}
+
+// Gray-dark
+.btn-gray-dark {
+    color: $color-gray-lighter;
+    background-color: $color-gray-dark;
+    border: $btn-outline-border-width solid $color-gray-dark;
+}
+
+.btn-gray-dark:active,
+.btn-gray-dark:focus,
+.btn-gray-dark:hover {
+    background-color: darken($color-gray-dark, 10%);
+    border-color: darken($color-gray-dark, 10%);
+    color: $color-gray-lighter;
+}
+
+.btn-gray-dark.btn-outline {
+    background-color: transparent;
+    border-color: $color-gray-dark;
+    color: $color-gray-dark;
+}
+
+.btn-gray-dark.btn-outline:active,
+.btn-gray-dark.btn-outline:focus,
+.btn-gray-dark.btn-outline:hover {
+    background-color: $color-gray-dark;
+    border-color: $color-gray-dark;
+    color: $color-gray-lighter;
+}
+// Blue button
+.btn-blue {
+    color: $color-blue-text;
+    background-color: $color-blue;
+    border-color: $color-blue;
+}
+
+.btn-blue:active,
+.btn-blue:focus,
+.btn-blue:hover {
+    background-color: darken($color-blue, 10%);
+    border-color: darken($color-blue, 10%);
+    color: $color-blue-text;
+}
+
+.btn-blue.btn-outline {
+    background-color: transparent;
+    border-color: $color-blue;
+    color: $color-blue;
+}
+
+.btn-blue.btn-outline:active,
+.btn-blue.btn-outline:focus,
+.btn-blue.btn-outline:hover {
+    background-color: $color-blue;
+    border-color: $color-blue;
+    color: $color-blue;
+}
+
+// Teal Blue button
+.btn-teal-blue {
+    color: $color-teal-blue-text;
+    background-color: $color-teal-blue;
+    border-color: $color-teal-blue;
+}
+
+.btn-teal-blue:active,
+.btn-teal-blue:focus,
+.btn-teal-blue:hover {
+    background-color: darken($color-teal-blue, 10%);
+    border-color: darken($color-teal-blue, 10%);
+    color: $color-teal-blue-text;
+}
+
+.btn-teal-blue.btn-outline {
+    background-color: transparent;
+    border-color: $color-teal-blue;
+    color: $color-teal-blue;
+}
+
+.btn-teal-blue.btn-outline:active,
+.btn-teal-blue.btn-outline:focus,
+.btn-teal-blue.btn-outline:hover {
+    background-color: $color-teal-blue;
+    border-color: $color-teal-blue;
+    color: $color-teal-blue;
+}
+
+// Green button
+.btn-green {
+    color: $color-green-text;
+    background-color: $color-green;
+    border-color: $color-green;
+}
+
+.btn-green:active,
+.btn-green:focus,
+.btn-green:hover {
+    background-color: darken($color-green, 10%);
+    border-color: darken($color-green, 10%);
+    color: $color-green-text;
+}
+
+.btn-green.btn-outline {
+    background-color: transparent;
+    border-color: $color-green;
+    color: $color-green;
+}
+
+.btn-green.btn-outline:active,
+.btn-green.btn-outline:focus,
+.btn-green.btn-outline:hover {
+    background-color: $color-green;
+    border-color: $color-green;
+    color: $color-green;
+}
+// Red button
+
+.btn-red {
+    color: $color-red-text;
+    background-color: $color-red;
+    border-color: $color-red;
+}
+
+.btn-red:active,
+.btn-red:focus,
+.btn-red:hover {
+    background-color: darken($color-red, 10%);
+    border-color: darken($color-red, 10%);
+    color: $color-red-text;
+}
+
+.btn-red.btn-outline {
+    background-color: transparent;
+    border-color: $color-red;
+    color: $color-red;
+}
+
+.btn-red.btn-outline:active,
+.btn-red.btn-outline:focus,
+.btn-red.btn-outline:hover {
+    background-color: $color-red;
+    border-color: $color-red;
+    color: $color-red;
+}
+
+// Pink button
+.btn-pink {
+    color: $color-pink-text;
+    background-color: $color-pink;
+    border-color: $color-pink;
+}
+
+.btn-pink:active,
+.btn-pink:focus,
+.btn-pink:hover {
+    background-color: darken($color-pink, 10%);
+    border-color: darken($color-pink, 10%);
+    color: $color-pink-text;
+}
+
+.btn-pink.btn-outline {
+    background-color: transparent;
+    border-color: $color-pink;
+    color: $color-pink;
+}
+
+.btn-pink.btn-outline:active,
+.btn-pink.btn-outline:focus,
+.btn-pink.btn-outline:hover {
+    background-color: $color-pink;
+    border-color: $color-pink;
+    color: $color-pink;
+}
+// Orange button
+
+.btn-orange {
+    color: $color-orange-text;
+    background-color: $color-orange;
+    border-color: $color-orange;
+}
+
+.btn-orange:active,
+.btn-orange:focus,
+.btn-orange:hover {
+    background-color: darken($color-orange, 10%);
+    border-color: darken($color-orange, 10%);
+    color: $color-orange-text;
+}
+
+.btn-orange.btn-outline {
+    background-color: transparent;
+    border-color: $color-orange;
+    color: $color-orange;
+}
+
+.btn-orange.btn-outline:active,
+.btn-orange.btn-outline:focus,
+.btn-orange.btn-outline:hover {
+    background-color: $color-orange;
+    border-color: $color-orange;
+    color: $color-orange;
+}
+// Yellow button
+
+.btn-yellow {
+    color: $color-yellow-text;
+    background-color: $color-yellow;
+    border-color: $color-yellow;
+}
+
+.btn-yellow:active,
+.btn-yellow:focus,
+.btn-yellow:hover {
+    background-color: darken($color-yellow, 10%);
+    border-color: darken($color-yellow, 10%);
+    color: $color-yellow-text;
+}
+
+.btn-yellow.btn-outline {
+    background-color: transparent;
+    border-color: $color-yellow;
+    color: $color-yellow;
+}
+
+.btn-yellow.btn-outline:active,
+.btn-yellow.btn-outline:focus,
+.btn-yellow.btn-outline:hover {
+    background-color: $color-yellow;
+    border-color: $color-yellow;
+    color: $color-yellow;
+}
+// Purple button
+
+.btn-purple {
+    color: $color-purple-text;
+    background-color: $color-purple;
+    border-color: $color-purple;
+}
+
+.btn-purple:active,
+.btn-purple:focus,
+.btn-purple:hover {
+    background-color: darken($color-purple, 10%);
+    border-color: darken($color-purple, 10%);
+    color: $color-purple-text;
+}
+
+.btn-purple.btn-outline {
+    background-color: transparent;
+    border-color: $color-purple;
+    color: $color-purple;
+}
+
+.btn-purple.btn-outline:active,
+.btn-purple.btn-outline:focus,
+.btn-purple.btn-outline:hover {
+    background-color: $color-purple;
+    border-color: $color-purple;
+    color: $color-purple;
+}
+// Gradient color buttons
+
+.btn-color-470604 {
+    color: #ffffff!important;
+    background: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+}
+
+.btn-color-470604:active,
+.btn-color-470604:focus,
+.btn-color-470604:hover {
+    background: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+}
+
+
+.btn-gradient-2 {
+    color: #ffffff!important;
+    background: linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -o-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -ms-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -moz-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -webkit-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -o-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -ms-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -moz-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -webkit-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+}
+
+.btn-gradient-2:active,
+.btn-gradient-2:focus,
+.btn-gradient-2:hover {
+    background: linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -o-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -ms-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -moz-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    background: -webkit-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -o-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -ms-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -moz-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+    border-image: -webkit-linear-gradient(left, rgb(8, 153, 151) 2%, rgb(30, 16, 29) 99%);
+}
+
+// Facebook button
+.btn-facebook {
+    color: $color-facebook-text;
+    background-color: $color-facebook;
+    border-color: $color-facebook;
+}
+
+.btn-facebook:active,
+.btn-facebook:focus,
+.btn-facebook:hover {
+    background-color: darken($color-facebook, 10%);
+    border-color: darken($color-facebook, 10%);
+    color: $color-facebook-text;
+}
+
+.btn-facebook.btn-outline {
+    background-color: transparent;
+    border-color: $color-facebook;
+    color: $color-facebook;
+}
+
+.btn-facebook.btn-outline:active,
+.btn-facebook.btn-outline:focus,
+.btn-facebook.btn-outline:hover {
+    background-color: $color-facebook;
+    border-color: $color-facebook;
+    color: $color-facebook;
+}
+
+// Google button
+.btn-google {
+    color: $color-google-text;
+    background-color: $color-google;
+    border-color: $color-google;
+}
+
+.btn-google:active,
+.btn-google:focus,
+.btn-google:hover {
+    background-color: darken($color-google, 10%);
+    border-color: darken($color-google, 10%);
+    color: $color-google-text;
+}
+
+.btn-google.btn-outline {
+    background-color: transparent;
+    border-color: $color-google;
+    color: $color-google;
+}
+
+.btn-google.btn-outline:active,
+.btn-google.btn-outline:focus,
+.btn-google.btn-outline:hover {
+    background-color: $color-google;
+    border-color: $color-google;
+    color: $color-google;
+}
+
+/* Button Elements */
+.btn .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}

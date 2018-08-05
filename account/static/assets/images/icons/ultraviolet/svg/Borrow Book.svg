@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" width="40" height="40">
+<g>
+	<path style="fill:#B6DCFE;" d="M6.5,37.5v-35H35c0.276,0,0.5,0.224,0.5,0.5v34c0,0.276-0.224,0.5-0.5,0.5H6.5z"/>
+	<g>
+		<path style="fill:#4788C7;" d="M35,3v34H7V3H35 M35,2H6v36h29c0.552,0,1-0.448,1-1V3C36,2.448,35.552,2,35,2L35,2z"/>
+	</g>
+</g>
+<g>
+	<path style="fill:#98CCFD;" d="M5,37.5c-0.276,0-0.5-0.224-0.5-0.5V3c0-0.276,0.224-0.5,0.5-0.5h3.5v35H5z"/>
+	<g>
+		<path style="fill:#4788C7;" d="M8,3v34H5V3H8 M9,2H5C4.448,2,4,2.448,4,3v34c0,0.552,0.448,1,1,1h4V2L9,2z"/>
+	</g>
+</g>
+<g>
+	<polygon style="fill:#FFFFFF;" points="23,26 23,15 20,15 20,26 16,26 21.5,32 27,26  "/>
+</g>
+<rect x="20" y="13" style="fill:#FFFFFF;" width="3" height="1"/>
+<rect x="20" y="11" style="fill:#FFFFFF;" width="3" height="1"/>
+<rect x="20" y="9" style="fill:#FFFFFF;" width="3" height="1"/>
+<rect x="20" y="7" style="fill:#FFFFFF;" width="3" height="1"/>
+</svg>

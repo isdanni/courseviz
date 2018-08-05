@@ -1,0 +1,123 @@
+[data-template-mode='cards'] .block-card-wrapper .block-card-section {
+    margin-bottom: 20px;
+    background: $card-bg;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section-inner {
+    padding: $card-spacer-y $card-spacer-x;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-title {
+    border-bottom: 1px solid $card-border-color;
+    position: relative;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-title .heading {
+    margin: 0;
+    padding: 16px 25px;
+    display: inline-block;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section-inner .card-section-title  {
+    margin-bottom: $card-spacer-y;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section-inner .card-section-title h3 {
+    padding: 0 0 16px 0;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-title .btn-aux {
+    display: inline-block;
+    position: relative;
+    float: right;
+    color: $color-gray-dark;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-title .btn-aux:hover {
+    color: $color-base-1;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-inner-title-wrapper {
+    padding: (1.5 * $spacer) 0;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-inner-title {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-sm;
+    font-weight: $heading-font-weight;
+    color: $heading-color;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-inner-title > i {
+    margin-right: 6px;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-inner-subtitle {
+    margin: 4px 0 0 0;
+    padding: 0;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    color: $color-gray-light;
+}
+[data-template-mode='cards'] .block-card-wrapper .card-section-inner-subtitle.subtitle-icon-aligned {
+    padding-left: 20px;
+}
+
+// Blocks insider card mode
+[data-template-mode='cards'] .block-card-wrapper .block {
+    //border: 0;
+}
+
+// Tables
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table {
+    margin-bottom: 0;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tbody > tr > td,
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tbody > tr > th,
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tfoot > tr > td,
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tfoot > tr > th,
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > thead > tr > td,
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > thead > tr > th {
+    vertical-align: middle;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section-inner .table > tbody > tr > td {
+    //padding: 15px 0 !important;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > thead > tr > th {
+    border-bottom-width: 1px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table .td-actions .btn.btn-xs {
+    padding: 3px 3px 3px 6px;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table .td-actions {
+    min-width: 90px;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tbody > tr {
+    position: relative;
+}
+[data-template-mode='cards'] .block-card-wrapper .block-card-section .table > tbody > tr:hover .td-actions .btn {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+// Blog
+[data-template-mode='cards'] .block-post .block-post-body {
+    padding-left: $spacer * 2;
+    padding-right: $spacer * 2;
+    padding-bottom: $spacer * 2;
+}
+[data-template-mode='cards'] .block-post-share {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+[data-template-mode='cards'] .block-post-comment-action {
+    padding: 0 0 $spacer 0;
+}
+[data-template-mode='cards'] .post-item .post-title {
+    margin-top: 10px;
+}
+[data-template-mode='cards'] .post-prev-next {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+[data-template-mode='cards'] .comment-list {
+    padding: 0;
+}

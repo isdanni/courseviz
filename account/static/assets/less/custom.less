@@ -1,0 +1,723 @@
+@color-base-1: #FFF;
+@color-base-2: #FFF;
+@font-family-base: '';
+@font-family-alt: '';
+@border-radius: '0';
+@card-border-radius: '0';
+
+/* Colors */
+.c-base-1 {
+    color: @color-base-1!important;
+}
+.c-base-2 {
+    color: @color-base-2!important;
+}
+.bg-base-1 {
+    background-color: @color-base-1!important;
+}
+.bg-base-2 {
+    background-color: @color-base-2!important;
+}
+
+/* Typography */
+body {
+	font-family: @font-family-base;
+}
+a.link--style-2 {
+	color: @color-base-1!important;
+}
+a.link--style-2:hover {
+	color: @color-base-1!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @font-family-alt!important;
+}
+.heading {
+	font-family: @font-family-alt!important;
+}
+.heading--base {
+	font-family: @font-family-base!important;
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+	font-family: @font-family-alt;
+}
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover,
+
+.navbar-nav .show .nav-link,
+.navbar-nav .show .nav-link:focus,
+.navbar-nav .show .nav-link:hover,
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .show .nav-link,
+.navbar-light .navbar-nav .show .nav-link:focus,
+.navbar-light .navbar-nav .show .nav-link:hover,
+
+.navbar-nav .nav-item-icon .nav-link:focus,
+.navbar-nav .nav-item-icon .nav-link:hover,
+.navbar-nav .nav-item-icon.show .nav-link,
+.navbar-nav .nav-item-icon.show .nav-link,
+.navbar-nav .nav-item-icon.show .nav-link:focus {
+    //background: @color-base-1; 
+}
+
+.navbar--style-1 .navbar-nav .nav-link:focus,
+.navbar--style-1 .navbar-nav .nav-link:hover,
+
+.navbar--style-1 .navbar-nav .show .nav-link,
+.navbar--style-1 .navbar-nav .show .nav-link:focus,
+.navbar--style-1 .navbar-nav .show .nav-link:hover,
+
+.navbar--style-1 .navbar-nav .show .nav-link::after,
+.navbar--style-1 .navbar-nav .nav-link:hover::after,
+.navbar--style-1 .navbar-nav .nav-link:focus::after,
+
+.navbar--style-1 .navbar-nav .show .nav-link,
+.navbar--style-1 .navbar-nav .show .nav-link:focus,
+.navbar--style-1 .navbar-nav .show .nav-link:hover {
+	background: transparent;
+	color: @color-base-1;
+}
+
+.navbar--style-1 .navbar-nav .show .nav-link::after,
+.navbar--style-1 .navbar-nav .nav-link:hover::after,
+.navbar--style-1 .navbar-nav .nav-link:focus::after {
+	color: @color-base-1;
+}
+
+.navbar--style-2 .navbar-nav .nav-link {
+	color: rgba(0, 0, 0, 0.4);
+	background: transparent;
+}
+
+.navbar--style-2 .navbar-nav .nav-link:focus,
+.navbar--style-2 .navbar-nav .nav-link:hover,
+.navbar--style-2 .navbar-nav .show .nav-link,
+.navbar--style-2 .navbar-nav .show .nav-link:focus,
+.navbar--style-2 .navbar-nav .show .nav-link:hover {
+	color: rgba(0, 0, 0, 0.7)!important;
+	background: transparent!important;
+}
+
+.navbar-inverse .dropdown-menu .dropdown-item:hover {
+	color: @color-base-1;
+}
+
+.navbar.bg-base-1 {
+    background-color: @color-base-1;
+}
+.navbar.bg-base-2 {
+    background-color: @color-base-2;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:focus,
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: @color-base-1;
+}
+
+/* Top Bar */
+.top-navbar .top-navbar-menu > ul.top-menu > li > a:hover,
+.top-navbar .top-navbar-menu ul.top-menu > li ul.sub-menu > li > a:hover,
+
+.top-navbar--inverse .top-navbar-menu > ul.top-menu > li > a:hover,
+.top-navbar .top-navbar-links .top-bar-date a:hover,
+.top-navbar .top-navbar-links .top-bar-link a:hover,
+.top-navbar .topbar-login > li a:hover {
+	color: @color-base-1;
+}
+.top-navbar .top-navbar-menu ul.top-menu > li ul.sub-menu > li > .language-active {
+	background: @color-base-1;
+}
+
+.top-navbar-currency-language li,
+.top-navbar .top-navbar-links .top-bar-date a,
+.top-navbar .top-navbar-links .top-bar-date span,
+.top-navbar .top-navbar-links .top-bar-link a,
+.top-navbar .top-navbar-links .top-bar-link span,
+.top-navbar .topbar-login > li a {
+	font-family: @font-family-alt;
+}
+
+/*
+
+----
+
+COMPONENTS: Summary
+
+----
+
+1. Alerts
+2. Badges
+3. Blocks
+4. Buttons
+5. Cards
+6. Carousels
+7. Collapse
+8. Datepicker
+9. Delimiters,
+10. Dropdown
+11. Footer
+12. Forms
+13. Icon blocks
+14. List groups
+15. Lists
+16. Masks
+17. Modal
+18. Nav pills
+19. Pagination
+20. Popovers
+21. Pricing
+22. Progress
+23. Rading
+24. Section separators
+25. Section titles
+26. Social
+27. Tables
+28. Timeline
+*/
+
+/* 1. Alerts */
+
+/* 2. Badges */
+.badge-duration {
+    color: @color-base-1;
+}
+.badge-corner-base-1 {
+    border-top-color: @color-base-1;
+}
+.ribbon.bg-base-1 {
+    border-right: 5px solid lighten(@color-base-1, 15%);
+}
+.ribbon.bg-base-1:before {
+    border-top: 27px solid @color-base-1;
+}
+
+.ribbon.bg-base-1:after {
+    border-bottom: 27px solid @color-base-1;
+}
+
+.ribbon.bg-base-2 {
+    border-right: 5px solid lighten(@color-base-2, 15%);
+}
+.ribbon.bg-base-2:before {
+    border-top: 27px solid @color-base-2;
+}
+
+.ribbon.bg-base-2:after {
+    border-bottom: 27px solid @color-base-2;
+}
+
+/* Blocks */
+.block {
+    border-radius: @card-border-radius @card-border-radius @card-border-radius;
+    -moz-border-radius: @card-border-radius @card-border-radius @card-border-radius;
+}
+.block-author .author-info .author-name > a:hover {
+    color: @color-base-1;
+}
+.overlay-label {
+    font-family: @font-family-alt;
+}
+.block-ribbon-fixed {
+    border-radius: @border-radius;
+}
+.block-image-holder .mask {
+    border-radius: @card-border-radius;
+}
+.block-image-holder:not(.no-radius) .block-image img {
+    border-radius: @card-border-radius;
+}
+.block-image-holder .block-info.block-info-over {
+    border-radius: 0 0 @card-border-radius @card-border-radius;
+}
+.block-image-holder .block-info.block-info-over--animated:hover {
+    border-radius: @card-border-radius;
+}
+.block-image-holder .block-info-over.block-info-over--style-2 {
+    border-radius: @card-border-radius;
+}
+.block.block--style-1.grid .block-category {
+    color: @color-base-1;
+}
+.block--style-2 .block-image {
+    border-top-left-radius: @card-border-radius;
+    border-bottom-left-radius: @card-border-radius;
+}
+.block--style-2 .block-body {
+    border-top-right-radius: @card-border-radius;
+    border-bottom-right-radius: @card-border-radius;
+}
+.block--style-2.grid .block-image {
+    border-top-left-radius: @card-border-radius;
+    border-top-right-radius: @card-border-radius;
+}
+
+.block--style-2.grid .block-body {
+    border-radius: @card-border-radius;
+}
+.block--style-3 img {
+    border-radius: @card-border-radius @card-border-radius 0 0;
+}
+.block--style-3 .block-price {
+    color: @color-base-1;
+}
+.block--style-3 ul.aux-info li {
+    font-family: @font-family-alt;
+}
+.block--style-3-v2 img {
+    border-radius: @card-border-radius;
+}
+.block--style-4 .info-author .author-info {
+    border-bottom-left-radius: @card-border-radius;
+}
+.block--style-4-v2 .block-body {
+    border-radius: @card-border-radius;
+}
+.block--style-4-v2 .block-body.bg-base-1:after {
+    border-top-color: @color-base-1;
+}
+.block--style-4-v2 .style-8-author {
+    border-bottom-left-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
+}
+.block--style-5 .block-image img {
+    border-radius: @card-border-radius;
+}
+.block--style-5 .block-mask-caption--over {
+    border-radius: @card-border-radius;
+}
+.block-quote .quote-icon {
+    color: @color-base-1;
+}
+.block-testimonial > .quote {
+    color: @color-base-1;
+}
+
+.block-testimonial > .block-body {
+    border-radius: @card-border-radius;
+}
+.block.article img {
+    border-radius: @card-border-radius;
+}
+
+.block.article .meta-tags a {
+    color: @color-base-1;
+}
+.block.article .video-hover-play a:hover:before {
+    background: @color-base-1;
+}
+.block.article.grid .article-category {
+    color: @color-base-1;
+}
+
+.block.article.list .article-label {
+    border-radius: @border-radius;
+}
+.block.article.list .article-category {
+    color: @color-base-1;
+}
+.article-wrapper .article-title > a:hover {
+    color: @color-base-1;
+}
+
+.block.product .product-title a:hover {
+    color: @color-base-1;
+}
+.block.property .block-content .content-title {
+    color: @color-base-1;
+}
+
+.block.property .block-content .price {
+    color: @color-base-2;
+}
+.block-post-comments--style-1 {
+    border-radius: @border-radius;
+}
+.block-cell .block-text p.price {
+    color: @color-base-1;
+}
+
+/* 4. Buttons */
+.btn {
+	font-family: @font-family-alt;
+}
+
+.btn-base-1 {
+	background-color: @color-base-1;
+	border-color: @color-base-1;
+}
+
+.btn-base-1:active,
+.btn-base-1.active,
+.btn-base-1:focus,
+.btn-base-1:hover {
+	background: darken(@color-base-1, 10%);
+}
+
+.btn-base-1.btn-outline {
+	border-color: @color-base-1!important;
+}
+
+.btn-base-1.btn-outline:active,
+.btn-base-1.btn-outline:focus,
+.btn-base-1.btn-outline:hover {
+	background-color: @color-base-1!important;
+	border-color: @color-base-1!important;
+}
+
+.btn-base-2 {
+	background-color: @color-base-2;
+	border-color: @color-base-2;
+}
+
+.btn-base-2:active,
+.btn-base-2.active,
+.btn-base-2:focus,
+.btn-base-2:hover {
+	background: darken(@color-base-2, 10%);
+}
+
+.btn-base-2.btn-outline {
+	border-color: @color-base-2!important;
+}
+
+.btn-base-2.btn-outline:active,
+.btn-base-2.btn-outline:focus,
+.btn-base-2.btn-outline:hover {
+	background-color: @color-base-2!important;
+	border-color: @color-base-2!important;
+}
+
+/* Cars */
+.card {
+    border-radius: @card-border-radius;
+}
+@media(min-width: 992px) {
+    .card-sticked-bottom {
+        border-radius: @card-border-radius @card-border-radius 0 0;
+    }
+}
+.card-flip .card-back {
+    border-radius: @card-border-radius;
+}
+.card-fill--hover:hover i {
+    color: @color-base-1!important;
+}
+.card-body--overlap {
+    border-radius: @card-border-radius;
+}
+.card-title > .btn-aux:hover > .aux-text {
+    color: @color-base-1;
+}
+.card.bg-base-1 .card-title-wrapped {
+    background: darken(@color-base-1, 3%);
+    border: 1px solid darken(@color-base-1, 5%);
+}
+
+@media(min-width: 768px) {
+    .row-no-padding [class^=col-]:first-child .card-colored {
+        border-radius: @card-border-radius 0 0  @card-border-radius;
+    }
+    .row-no-padding [class^=col-]:last-child .card-colored {
+        border-radius: 0 @card-border-radius @card-border-radius 0 ;
+    }
+}
+
+.card-image img,
+.card-image > .view {
+    max-width: 100%;
+    border-radius: @card-border-radius @card-border-radius 0 0;
+}
+.card-horizontal .card-image img {
+    border-radius: @card-border-radius 0 0 @card-border-radius;
+}
+.card-blockquote > footer {
+    color: @color-base-1;
+}
+
+.card-outer-quote {
+    color: @color-base-1;
+}
+.card-hover--animation-1:hover .btn {
+    background: @color-base-1;
+    border-color: @color-base-1;
+}
+
+/* 6. Carousel */
+.carousel--style-1 .carousel-control.right {
+	border-top-left-radius: @border-radius;
+	border-bottom-left-radius: @border-radius;
+}
+
+.carousel--style-1 .carousel-control.left {
+	border-top-right-radius: @border-radius;
+	border-bottom-right-radius: @border-radius;
+}
+
+/* 7. Collapse */
+.accordion-cards--stacked .card:first-child {
+    border-top-left-radius: @border-radius;
+    border-top-right-radius: @border-radius;
+}
+
+.accordion-cards--stacked .card:last-child {
+    border-bottom-left-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
+}
+.accordion-cards--spaced .card {
+    border-radius: @border-radius;
+}
+.accordion--style-3 .card-header > .card-title > a[aria-expanded="true"],
+.accordion--style-4 .card-header > .card-title > a[aria-expanded="true"] {
+    color: @color-base-1 !important;
+}
+
+/* 9. Delimiters */
+.delimiter-left-thick--style-1 {
+    border-left: 4px solid @color-base-1;
+}
+.sd-1:before {
+    background: @color-base-1;
+}
+.sd-base-1:before {
+    background: @color-base-1;
+}
+.vd--1:before {
+    background-color: @color-base-1;
+}
+
+/* 10. Dropdowns */
+.dropdown-menu.dropdown-menu-sm {
+    border: @border-radius;
+}
+
+.dropdown-menu.dropdown-menu-lg {
+    border-radius: @border-radius;
+}
+
+.dropdown-menu.dropdown-menu-xl {
+    border-radius: @border-radius;
+}
+.dropdown--style-2 .dropdown-image {
+    border-radius: @border-radius;
+}
+
+/* 12. Footer */
+.footer--style-1 {
+    background: @color-base-1;
+}
+
+/* 13. Forms */
+.form-base-1 .form-control,
+.form-base-1 .input-group-addon {
+    background: darken(@color-base-1, 10%);
+    border-color: darken(@color-base-1, 12%);
+}
+
+.form-base-1 .form-control:focus {
+    background: darken(@color-base-1, 10%);
+    border-color: darken(@color-base-1, 12%);
+}
+.form-base-2 .form-control {
+    background: darken(@color-base-2, 10%);
+    border-color: darken(@color-base-2, 12%);
+}
+
+.form-base-2 .form-control:focus {
+    background: darken(@color-base-2, 10%);
+    border-color: darken(@color-base-2, 12%);
+}
+.checkbox-primary input[type="checkbox"]:checked + label::before,
+.checkbox-primary input[type="radio"]:checked + label::before {
+    background-color: @color-base-1;
+    border-color: @color-base-1;
+}
+.radio-primary input[type="radio"] + label::after {
+    background-color: @color-base-1;
+}
+
+.radio-primary input[type="radio"]:checked + label::before {
+    border-color: @color-base-1;
+}
+
+.radio-primary input[type="radio"]:checked + label::after {
+    background-color: @color-base-1;
+}
+.product-size label:hover {
+    color: @color-base-1;
+    cursor: pointer;
+    border-color: @color-base-1;
+}
+
+.product-size input:checked ~ label {
+    color: @color-base-1;
+    border-color: @color-base-1;
+}
+
+/* 14. Icon blocks */
+.feature--boxed-border {
+    border-radius: @card-border-radius;;
+}
+a > .feature--boxed-border:hover {
+    border-color: @color-base-1;
+}
+.block-icon.rounded {
+    border-radius: @border-radius;
+}
+.icon-block--style-1-v1 .block-icon > .icon-number,
+.icon-block--style-1-v1 .block-icon i {
+    color: @color-base-1;
+}
+.icon-block--style-1-v3 .block-icon {
+    border: 1px solid @color-base-1;
+}
+
+.icon-block--style-1-v3 .block-icon i {
+    color: @color-base-1;
+}
+.icon-block--style-1.v3 .block-icon i {
+    color: @color-base-1;
+}
+.icon-block--style-1-v5.active .block-icon {
+    color: @color-base-1 !important;
+}
+.icon-block--style-1-v5.block-bordered-grid-animated:hover .block-inner::after {
+    border: 2px solid @color-base-1;
+}
+.icon-block--style-2-v2.active .block-icon,
+.icon-block--style-2-v2:hover .block-icon {
+    border-color: @color-base-1;
+    background: @color-base-1;
+}
+.icon-block--style-3-v1 > i {
+    color: @color-base-1;
+}
+.icon-block--style-4 .block-icon {
+    background: @color-base-1;
+}
+.icon-block--style-4:hover .block-icon::after {
+    border: 3px solid @color-base-1;
+}
+.icon-block--arrow .block-icon {
+    border-radius: @card-border-radius;
+}
+.icon-block--arrow .block-icon:after {
+    border-top-color: @color-base-1;
+}
+
+/* 15. Lists */
+ul.icons li > a:hover {
+    color: @color-base-1;
+}
+ul.inline-links > li > a:hover > heading {
+    color: @color-base-1;
+}
+ul.inline-links.inline-links--style-2 > li:before {
+    color: @color-base-1;
+}
+ul.categories > li:hover > a {
+    //color: @color-base-1;
+}
+ul.categories--style-1 > li > a:hover > .category-name {
+    //color: @color-base-1;
+}
+ul.categories--style-3 > li > a:hover {
+    //color: @color-base-1;
+}
+ul.categories--style-3 > li > a.active {
+    //color: @color-base-1;
+}
+.list-wrapper {
+    background: @color-base-1;
+    border-radius: @card-border-radius;
+}
+.sidebar .list-unstyled > li:hover > a {
+    color: @color-base-1;
+}
+.list-recent .post-author a:hover {
+    color: @color-base-1;
+}
+.list-recent .post-title a:hover {
+    color: @color-base-1;
+}
+.list-icon--style-1 i {
+    color: @color-base-1;
+}
+
+/* 16. Masks */
+.mask-base-1--style-1 {
+    background: rgba(red(@color-base-1), green(@color-base-1), blue(@color-base-1), 0.9);
+}
+.mask-base-1--style-2 {
+    background: rgba(red(@color-base-1), green(@color-base-1), blue(@color-base-1), 0.5);
+}
+.mask-base-1--style-3 {
+    background: rgba(red(@color-base-1), green(@color-base-1), blue(@color-base-1), 0.7);
+}
+
+.mask-base-2--style-1 {
+    background: rgba(red(@color-base-2), green(@color-base-2), blue(@color-base-2), 0.9);
+}
+.mask-base-2--style-2 {
+    background: rgba(red(@color-base-2), green(@color-base-2), blue(@color-base-2), 0.5);
+}
+.mask-base-2--style-3 {
+    background: rgba(red(@color-base-2), green(@color-base-2), blue(@color-base-2), 0.7);
+}
+
+/* 17. Modals */
+.modal-content {
+    border-radius: @card-border-radius;
+}
+.modal[data-modal-color=base-1] .modal-content {
+    background-color: @color-base-1;
+}
+.modal[data-modal-color=base-2] .modal-content {
+    background-color: @color-base-2;
+}
+
+/* 18. Nav pills */
+
+/* 19. Pagination */
+
+/* 20. Pricing */
+.pricing-plans--style-1 .block-pricing.active {
+	background: @color-base-1;
+}
+.pricing-plans--style-2 .block-pricing.active .plan-title {
+	background: @color-base-1;
+	border-bottom: 1px solid @color-base-1;
+}
+.pricing-plans--style-3 .block-pricing .plan-title-wrapper.active {
+}
+.promos.bg-base-1 .promo {
+	background: @color-base-1;
+}
+
+.promos.bg-base-2 .promo {
+	background: @color-base-2;
+}
+.promos.bg-base-1 .scale {
+    box-shadow: 0 0 4px 1px darken(@color-base-1, 10%);
+}
+
+.promos.bg-base-2 .scale {
+    box-shadow: 0 0 4px 1px darken(@color-base-2, 10%);
+}
+
+@media(max-width: 767px) {
+	.promo {
+		border-radius: @card-border-radius;
+	}
+}
+
+/* 21. Progress */

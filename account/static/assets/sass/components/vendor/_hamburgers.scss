@@ -1,0 +1,51 @@
+/* Hamburgers */
+.hamburger {
+    padding: 0;
+}
+.hamburger-box {
+    width: 20px;
+    height: 18px;
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $navbar-toggle-color;
+}
+
+.hamburger:hover:not(.is-active) .hamburger-inner,
+.hamburger:hover:not(.is-active) .hamburger-inner:after,
+.hamburger:hover:not(.is-active) .hamburger-inner:before {
+    background-color: $navbar-toggle-color-hover;
+}
+
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+    background-color: $navbar-toggle-color-active;
+}
+
+.hamburger:not(.is-active) .hamburger-inner:before {
+    top:  6px!important;
+}
+.hamburger:not(.is-active) .hamburger-inner:after {
+    top: 12px!important;
+}
+
+.navbar-inverse .hamburger-inner,
+.navbar-inverse .hamburger-inner:after,
+.navbar-inverse .hamburger-inner:before {
+    background-color: $navbar-dark-toggle-color;
+}
+
+.navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner,
+.navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner:after,
+.navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner:before {
+    background-color: $navbar-dark-toggle-color-hover;
+}
+
+.navbar-inverse .hamburger.is-active .hamburger-inner:after,
+.navbar-inverse .hamburger.is-active .hamburger-inner:before {
+    background-color: $navbar-dark-toggle-color-active;
+}

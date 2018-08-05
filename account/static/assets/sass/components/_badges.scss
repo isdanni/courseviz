@@ -1,0 +1,271 @@
+// Labels
+
+.badge {
+    padding: .45em .45em;
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+.badge-inline {
+    margin-right: 0.625rem;
+}
+
+.badge-inline + span {
+    top: 2px;
+    position: relative;
+    font-size: $font-size-sm;
+}
+
+.badge-inline + span > a {
+    text-decoration: underline;
+}
+
+.badge-md {
+    padding: 0.65em 1em;
+}
+
+.badge-lg {
+    padding: 0.85em 1.25em;
+}
+
+.badge a {
+    color: #FFF;
+    font-weight: 500;
+}
+
+.badge-pill {
+    padding: .45em .65em;
+}
+
+.badge-pill.badge-md {
+    padding: 0.65em 1em;
+}
+
+.badge-pill.badge-lg {
+    padding: 0.85em 1.25em;
+}
+
+// Types
+.badge-duration {
+    color: $color-base-1;
+    font-weight: 500;
+}
+
+/* Styles */
+.badge--2 {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    color: $color-gray-light;
+    font-size: $font-size-sm;
+}
+.badge--2 strong {
+    color: $color-gray-dark;
+}
+.badge--2 > i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    margin-right: 6px;
+}
+// Corner badges
+.badge-corner:empty {
+    display: inline-block;
+}
+
+.badge-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 66px solid #888;
+    border-top-color: rgba(0,0,0,0.3);
+    border-left: 66px solid transparent;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.badge-corner span {
+    position: absolute;
+    top: -52px;
+    left: -28px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.badge-corner-base-1 {
+    border-top-color: $color-base-1;
+}
+
+.badge-corner-blue {
+    border-top-color: $color-blue;
+}
+
+.badge-corner-green {
+    border-top-color: $color-green;
+}
+
+.badge-corner-red {
+    border-top-color: $color-red;
+}
+
+.badge-corner-orange {
+    border-top-color: $color-orange;
+}
+
+.badge-corner-pink {
+    border-top-color: $color-pink;
+}
+
+.badge-corner-yellow {
+    border-top-color: $color-yellow;
+}
+
+.badge-corner-purple {
+    border-top-color: $color-purple;
+}
+
+.badge-corner-black {
+    border-top-color: $color-black;
+}
+// Ribbons
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: -5px;
+    padding: 0.875rem;
+}
+.ribbon:after,
+.ribbon:before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    border-left: 10px solid transparent;
+}
+
+.ribbon:before {
+    top: 0;
+}
+
+.ribbon:after {
+    bottom: 0;
+}
+
+.ribbon span {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: 600;
+}
+
+.ribbon.bg-base-1 {
+    border-right: 5px solid lighten($color-base-1, 15%);
+}
+.ribbon.bg-base-1:before {
+    border-top: 27px solid $color-base-1;
+}
+
+.ribbon.bg-base-1:after {
+    border-bottom: 27px solid $color-base-1;
+}
+
+.ribbon.bg-base-2 {
+    border-right: 5px solid lighten($color-base-2, 15%);
+}
+.ribbon.bg-base-2:before {
+    border-top: 27px solid $color-base-2;
+}
+
+.ribbon.bg-base-2:after {
+    border-bottom: 27px solid $color-base-2;
+}
+
+.ribbon.bg-gray-dark {
+    border-right: 5px solid lighten($color-gray-dark, 15%);
+}
+.ribbon.bg-gray-dark:before {
+    border-top: 27px solid $color-gray-dark;
+}
+
+.ribbon.bg-gray-dark:after {
+    border-bottom: 27px solid $color-gray-dark;
+}
+
+.ribbon.bg-red {
+    border-right: 5px solid lighten($color-red, 15%);
+}
+.ribbon.bg-red:before {
+    border-top: 27px solid $color-red;
+}
+
+.ribbon.bg-red:after {
+    border-bottom: 27px solid $color-red;
+}
+
+.ribbon.bg-orange {
+    border-right: 5px solid lighten($color-orange, 15%);
+}
+.ribbon.bg-orange:before {
+    border-top: 27px solid $color-orange;
+}
+
+.ribbon.bg-orange:after {
+    border-bottom: 27px solid $color-orange;
+}
+
+.ribbon.bg-yellow {
+    border-right: 5px solid lighten($color-yellow, 15%);
+}
+.ribbon.bg-yellow:before {
+    border-top: 27px solid $color-yellow;
+}
+
+.ribbon.bg-yellow:after {
+    border-bottom: 27px solid $color-yellow;
+}
+
+.ribbon.bg-blue {
+    border-right: 5px solid lighten($color-blue, 15%);
+}
+.ribbon.bg-blue:before {
+    border-top: 27px solid $color-blue;
+}
+
+.ribbon.bg-blue:after {
+    border-bottom: 27px solid $color-blue;
+}
+
+.ribbon.bg-green {
+    border-right: 5px solid lighten($color-green, 15%);
+}
+.ribbon.bg-green:before {
+    border-top: 27px solid $color-green;
+}
+
+.ribbon.bg-green:after {
+    border-bottom: 27px solid $color-green;
+}
+
+.ribbon.bg-purple {
+    border-right: 5px solid lighten($color-purple, 15%);
+}
+.ribbon.bg-purple:before {
+    border-top: 27px solid $color-purple;
+}
+
+.ribbon.bg-purple:after {
+    border-bottom: 27px solid $color-purple;
+}
+.ribbon.bg-pink {
+    border-right: 5px solid lighten($color-pink, 15%);
+}
+.ribbon.bg-pink:before {
+    border-top: 27px solid $color-pink;
+}
+
+.ribbon.bg-pink:after {
+    border-bottom: 27px solid $color-pink;
+}

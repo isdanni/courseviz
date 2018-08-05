@@ -1,0 +1,723 @@
+.icon-block {
+    position: relative;
+}
+
+// Feature wrapper
+.row .feature > .icon-block {
+     margin-top: 0!important;
+ }
+.feature--boxed-border {
+    padding: $spacer * 2;
+    border: 1px solid $card-border-color;
+    border-radius: $card-border-radius;
+    position: relative;
+}
+.feature--boxed-border-light {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.feature--boxed-border.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: $color-base-1;
+    left: 0;
+}
+.feature--boxed-border p {
+    margin-bottom: 0;
+}
+
+a > .feature--boxed-border p {
+    color: $color-gray;
+}
+a > .feature--boxed-border:hover {
+    border-color: $color-base-1;
+}
+
+.feature--text-only .heading + p {
+    max-width: 22.28571429em;
+}
+
+.feature .feature-inner-spacer {
+    max-width: 80%;
+}
+
+// Feature backgrounds
+.feature--bg-1 {
+    background: $card-bg;
+}
+.feature--bg-2 {
+    background: $card-inverse-bg;
+}
+.feature--bg-2 *:not(.btn):not(.alert):not(.form-control):not(.heading):not(a),
+.feature-inverse *:not(.btn):not(.alert):not(.form-control):not(.heading):not(a) {
+    color: $card-inverse-text-color;
+}
+.feature--bg-2 .heading,
+.feature--bg-2 .heading > a,
+.feature-inverse .heading,
+.feature-inverse .heading > a {
+    color: $card-inverse-title-color;
+}
+.feature--bg-3 {
+    background: #fafafa;
+}
+
+// Feature inner elements
+.feature-body {
+    padding: $spacer;
+}
+.feature-content .heading,
+.feature-content p {
+    margin-bottom: 0
+}
+
+.feature-headline {
+    position: relative;
+}
+.feature-headline:before,
+.feature-headline:after {
+    content: '';
+    display: table;
+}
+.feature-headline:after {
+    clear: both;
+}
+.feature-headline:not(.no-linethrough):before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+.feature-headline > .headline-title {
+    padding-right: 1rem;
+    position: relative;
+}
+.feature-headline > .headline-title + .headline-label {
+    float: right;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.feature--bg-1 .feature-headline > .headline-title,
+.feature--bg-1 .feature-headline > .headline-label {
+    background: $card-bg;
+}
+.feature--bg-2 .feature-headline > .headline-title,
+.feature--bg-2 .feature-headline > .headline-label {
+    background: $card-inverse-bg;
+}
+.feature--bg-3 .feature-headline > .headline-title,
+.feature--bg-3 .feature-headline > .headline-label {
+    background: #fafafa;
+}
+
+// Block icon options
+.block-icon.circle {
+    border-radius: 100%;
+}
+
+.block-icon.rounded {
+    border-radius: $border-radius;
+}
+
+// Bordered icon blocks
+.block-bordered-grid {
+    border-right: 1px solid $border-color-base;
+    border-bottom: 1px solid $border-color-base;
+    padding: 40px;
+    border-radius: 0;
+}
+
+.block-bordered-grid--style-2 {
+    border-top-style: dashed;
+    border-right-style: dashed;
+}
+@media(max-width: 991px) {
+	.block-bordered-grid--style-2 {
+		margin-bottom: 0!important;
+	}
+}
+@media(min-width: 768px) and (max-width: 991px) {
+	.block-bordered-grid.col-sm-6:nth-child(2n+2) {
+		border-right: 0;
+	}
+	.block-bordered-grid.col-sm-4:nth-child(3n+3) {
+		border-right: 0;
+	}
+	.block-bordered-grid.col-sm-3:nth-child(4n+4) {
+		border-right: 0;
+	}
+}
+
+@media(min-width: 992px) {
+	.block-bordered-grid[class*="col-"]:last-child {
+		border-right: 0;
+	}
+	.block-bordered-grid.col-md-6:nth-child(2n+2) {
+		border-right: 0;
+	}
+	.block-bordered-grid.col-md-4:nth-child(3n+3) {
+		border-right: 0;
+	}
+	.block-bordered-grid.col-md-3:nth-child(4n+4) {
+		border-right: 0;
+	}
+}
+
+// Icon block style 1: v1, v2, v3, v4
+.icon-block--style-1 {
+    position: relative;
+}
+
+[class^="icon-block--style-1"] {
+    position: relative;
+}
+
+.icon-block--style-1-v1 .block-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+}
+
+.icon-block--style-1-v1 .block-icon > .icon-number,
+.icon-block--style-1-v1 .block-icon i {
+    color: $color-base-1;
+}
+
+.icon-block--style-1-v1 .block-icon i,
+.icon-block--style-1-v1 .block-icon .icon-number {
+    font-size: 50px;
+}
+
+.icon-block--style-1-v1 .block-icon.c-white i {
+    color: $color-white;
+}
+
+.icon-block--style-1-v1 .block-content {
+    padding-left: 70px;
+}
+
+// Small icon
+.icon-block--style-1-v1 .block-icon-sm {
+    width: 30px;
+    height: 30px;
+    line-height: 1.3;
+}
+
+.icon-block--style-1-v1 .block-icon-sm i {
+    font-size: 30px;
+}
+
+.icon-block--style-1-v1 .block-icon-sm + .block-content {
+    padding-left: 50px;
+}
+
+// Right aligned icon
+.icon-block--style-1-v1 .block-icon-right {
+    left: auto;
+    right: 0;
+}
+
+.icon-block--style-1-v1 .block-icon-right + .block-content {
+    padding-right: 70px;
+    padding-left: 0;
+    text-align: right;
+}
+// STYLE 1: Version 2
+.icon-block--style-1-v2 .heading {
+    margin-bottom: 10px;
+}
+
+.icon-block--style-1-v2 .block-icon,
+.icon-block--style-1-v3 .block-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    //text-align: right;
+}
+.icon-block--style-1-v2 .block-icon i,
+.icon-block--style-1-v3 .block-icon i {
+    font-size: 50px;
+    line-height: 1;
+}
+.icon-block--style-1-v2 .block-icon i {
+    color: $color-gray-dark;
+}
+
+.icon-block--style-1-v2 .block-icon .icon-number {
+    font-size: 50px;
+    line-height: 1;
+    display: block;
+    text-align: right;
+}
+
+.icon-block--style-1-v2 .block-icon .icon-number {
+    color: $color-gray-dark;
+}
+
+.icon-block--style-1-v2 .block-content {
+    padding-left: 70px;
+}
+
+// Block icon sizes + Content blocks
+.icon-block--style-1-v2 .block-icon-lg,
+.icon-block--style-1-v3 .block-icon-lg {
+    width: 70px;
+    height: 70px;
+}
+.icon-block--style-1-v2 .block-icon-lg i,
+.icon-block--style-1-v3 .block-icon-lg i {
+    font-size: 70px;
+}
+
+.icon-block--style-1-v2 .block-icon-lg + .block-content {
+    padding-left: 80px;
+}
+
+// Block icon: Style 1 v2 options
+.icon-block--style-1-v2 .block-icon-sm {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-block--style-1-v2 .block-icon-sm i {
+    font-size: 30px;
+}
+
+.icon-block--style-1-v2 .block-icon-sm + .block-content {
+    padding-left: 50px;
+}
+
+.icon-block--style-1-v2 .block-icon-right {
+    left: auto;
+    right: 0;
+    text-align: left;
+}
+
+.icon-block--style-1-v2 .block-icon-right.block-icon-lg + .block-content {
+    padding-left: 0;
+    padding-right: 80px;
+}
+
+.icon-block--style-1-v2 .block-icon-right + .block-content {
+    padding-left: 0;
+    padding-right: 70px;
+    text-align: right;
+}
+
+.icon-block--style-1-v2 .block-icon-right.block-icon-sm + .block-content {
+    padding-left: 0;
+    padding-right: 50px;
+}
+
+// Block icon: Style 1, Version 3
+.icon-block--style-1-v3 .block-icon,
+.icon-block--style-1-v4 .block-icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.icon-block--style-1-v3 .block-icon {
+    border: 1px solid $color-base-1;
+}
+
+.icon-block--style-1-v4 .block-icon {
+    border: 1px solid $color-gray-dark;
+}
+
+.icon-block--style-1-v3-dashed .block-icon,
+.icon-block--style-1-v4-dashed .block-icon {
+    border-style: dashed;
+}
+
+.icon-block--style-1-v3 .block-icon i,
+.icon-block--style-1-v4 .block-icon i {
+    font-size: 28px;
+    line-height: 60px;
+    font-weight: normal;
+}
+
+.icon-block--style-1-v3 .block-icon i {
+    color: $color-base-1;
+}
+
+.icon-block--style-1-v4 .block-icon i {
+    color: $color-gray-dark;
+}
+
+.icon-block--style-1-v3 .block-content,
+.icon-block--style-1-v4 .block-content {
+    padding-left: 85px;
+}
+
+.icon-block--style-1.v3 .block-icon i {
+    font-size: 15px;
+    color: $color-base-1;
+}
+
+.icon-block--style-1.v4 .block-icon i {
+    font-size: 15px;
+    color: $color-gray-dark;
+}
+
+.icon-block--style-1.v3 .block-content,
+.icon-block--style-1.v4 .block-content {
+    padding-left: 30px;
+}
+
+.icon-block--style-1-v3.block-icon-right .block-icon,
+.icon-block--style-1-v4.block-icon-right .block-icon {
+    left: auto;
+    right: 0;
+}
+
+.icon-block--style-1-v3.block-icon-right .block-content,
+.icon-block--style-1-v4.block-icon-right .block-content {
+    padding-left: 0;
+    padding-right: 85px;
+    text-align: right;
+}
+
+.icon-block--style-1-v5 {
+    position: relative;
+}
+
+.icon-block--style-1-v5 .block-icon {
+    display: block;
+    margin-bottom: $spacer;
+}
+
+.icon-block--style-1-v5 .block-icon > i {
+    font-size: 40px;
+}
+.icon-block--style-1-v5 .block-icon-sm > i {
+    font-size: 20px;
+}
+.icon-block--style-1-v5 .block-icon-lg > i {
+    font-size: 60px;
+}
+
+.icon-block--style-1-v5 .block-icon > img {
+    width: 80px;
+}
+.icon-block--style-1-v5 .block-icon-sm > img {
+    width: 60px;
+}
+.icon-block--style-1-v5 .block-icon-lg > img {
+    width: 100px;
+}
+
+.icon-block--style-1-v5.active .block-icon {
+    color: $color-base-1 !important;
+}
+
+.icon-block--style-1-v5 .block-icon-circle {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    border-radius: 50%;
+    background: darken($color-base-1, 10%);
+}
+.icon-block--style-1-v5 .block-content p {
+    margin-top: 10px;
+}
+
+.icon-block--style-1-v5.block-bordered-grid-animated {
+    padding: (3 * $spacer) (2 * $spacer);
+}
+
+.icon-block--style-1-v5.block-bordered-grid-animated .block-inner {
+    display: block;
+    color: $color-gray-light;
+}
+
+.icon-block--style-1-v5.block-bordered-grid-animated .block-inner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.1);
+}
+
+.icon-block--style-1-v5.block-bordered-grid-animated:hover .block-inner::after {
+    border: 2px solid $color-base-1;
+    transform: scale(1);
+}
+
+.block.style-5 .block-icon.block-icon-lg i {
+    font-size: 60px;
+}
+// Icon block: STYLE 1 (inverse)
+.icon-block--style-1-v3.icon-block-inverse .block-icon {
+    border-color: $color-white;
+}
+
+.icon-block--style-1-v1.icon-block-inverse .block-icon i,
+.icon-block--style-1-v2.icon-block-inverse .block-icon i,
+.icon-block--style-1-v3.icon-block-inverse .block-icon i,
+.icon-block--style-1-v4.icon-block-inverse .block-icon i,
+.icon-block--style-1-v5.icon-block-inverse .block-icon i {
+    color: $color-white;
+}
+// Icon block: Style 2
+.icon-block--style-2-v1:hover .block-icon,
+.icon-block--style-2-v2:hover .block-icon {
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+}
+
+.icon-block--style-2-v1 .heading,
+.icon-block--style-2-v2 .heading {
+    margin-bottom: 0.5 * $spacer !important;
+}
+
+.icon-block--style-2-v1 .block-icon {
+    //margin: auto;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 2 * $spacer;
+}
+
+.icon-block--style-2-v2 .block-icon {
+    margin-bottom: 2 * $spacer;
+}
+
+.icon-block--style-2-v2 .block-icon {
+    margin: auto auto 2 * $spacer;
+    width: 76px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+    font-size: 32px;
+    border: 2px solid $color-gray-light;
+    color: $color-gray;
+}
+
+.icon-block--style-2-v2.active .block-icon,
+.icon-block--style-2-v2:hover .block-icon {
+    border-color: $color-base-1;
+    background: $color-base-1;
+    color: $color-base-text-1;
+}
+
+// Icon block: STYLE 3
+.icon-block--style-3 {
+    position: relative;
+}
+
+.icon-block--style-3 > i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    font-size: 20px;
+}
+
+.icon-block--style-3 > .icon-number {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    font-size: 17px;
+}
+
+.icon-block--style-3 .icon-label {
+    display: block;
+    position: absolute;
+    width: 40px;
+    left: 0;
+    top: 45px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.icon-block--style-3 .icon-block-text {
+    line-height: 40px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: $font-family-alt;
+}
+
+.icon-block--style-3 .icon-block-subtext {
+    position: absolute;
+    top: 34px;
+    left: 54px;
+}
+
+.icon-block--style-3-v1 > i {
+    border: 1px solid $color-gray-lighter;
+    background: transparent;
+    color: $color-base-1;
+}
+
+.icon-block--style-3-v2 > .icon-number,
+.icon-block--style-3-v2 > i {
+    position: absolute;
+}
+
+.icon-block--style-3-v2 .icon-block-content {
+    padding-left: 65px;
+}
+// Icon block - STYLE 4
+.icon-block--style-4 {
+    overflow: visible;
+    position: relative;
+    margin-top: 42px;
+    background-color: $card-bg;
+    border: 1px solid $card-border-color;
+    border-top: 0;
+    border-radius: $card-border-radius;
+}
+.icon-block--style-4::before,
+.icon-block--style-4::after {
+    content: "";
+    width: calc(50% - 52px);
+    position: absolute;
+    top: 0;
+    border-top: 1px solid $card-border-color;
+}
+.icon-block--style-4::before {
+    left: 0;
+    border-top-left-radius: $card-border-radius;
+}
+.icon-block--style-4::after {
+    right: 0;
+    border-top-right-radius: $card-border-radius;
+}
+.icon-block--style-4 .block-icon {
+    width: 84px;
+    height: 84px;
+    text-align: center;
+    line-height: 84px;
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    margin-left: -42px;
+    border-radius: 100%;
+    background: $color-base-1;
+    color: $color-base-text-1;
+}
+
+.icon-block--style-4:hover .block-icon {
+    -webkit-animation-name: rotate-icon;
+    -webkit-animation-duration: 0.3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
+.icon-block--style-4 .block-icon::after {
+    content: "";
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -42px;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.icon-block--style-4:hover .block-icon::after {
+    width: 98px;
+    height: 98px;
+    top: -7px;
+    left: 50%;
+    margin-left: -49px;
+    border: 3px solid $color-base-1;
+}
+.icon-block--style-4 .block-icon i {
+    font-size: 40px;
+}
+
+.icon-block--style-4 .block-body {
+    padding-top: 80px;
+    padding-left: $spacer * 2;
+    padding-right: $spacer * 2;
+}
+@media (max-width: 991px) {
+    .icon-block--style-4 {
+        margin-top: 80px;
+    }
+}
+
+// Icon blocks arrow
+.icon-block--arrow {
+    border: 0;
+}
+.icon-block--arrow .block-icon {
+    width: 120px;
+    margin: 0 auto;
+    padding: $spacer * 2;
+    position: relative;
+    text-align: center;
+    border-radius: $card-border-radius;
+}
+
+.icon-block--arrow .block-icon i {
+    font-size: 40px;
+}
+
+.icon-block--arrow .block-icon:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: $color-base-1;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
+.icon-block--arrow .block-body {
+    margin-top: 1.7rem;
+    padding: 0 2rem;
+}
+
+// Keyframes
+@-webkit-keyframes rotate-icon {
+    0% {
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(360deg);
+    }
+}

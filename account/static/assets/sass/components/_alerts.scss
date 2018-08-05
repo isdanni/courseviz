@@ -1,0 +1,8 @@
+// Bug fix for when using a background color with a custom text culor set
+.alert {
+    font-size: $font-size-sm;
+}
+.alert strong {
+    color: inherit!important;
+    font-weight: 500;
+}

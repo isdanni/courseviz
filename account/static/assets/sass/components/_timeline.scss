@@ -1,0 +1,138 @@
+.timeline-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background: $border-color-base;
+    top: 0;
+    left: 17px;
+    bottom: 0;
+}
+
+.timeline-item:last-child:before {
+    background: transparent;
+}
+
+.timeline-item.first:before {
+    top: 30px;
+}
+
+.timeline-item .timeline-info {
+    min-height: 100%;
+    padding: 0 20px 30px 40px;
+}
+
+.timeline-item.first .timeline-info {
+    padding-top: 20px;
+}
+@media screen and (min-width: 760px) {
+    .timeline-item .timeline-info {
+        float: left;
+        width: 100%;
+    }
+}
+
+.timeline-item .timeline-info .date {
+    position: relative;
+    font-size: $font-size-sm;
+    color: $color-gray-light;
+    margin-bottom: 10px;
+}
+
+.timeline-item .timeline-info .date:before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid $border-color-base;
+    background: #fff;
+    left: -28px;
+    top: 0;
+}
+
+.timeline-item .timeline-info .timeline-title {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-h6;
+    color: $color-gray-dark;
+    font-weight: 500;
+}
+
+.timeline-item .timeline-info .timeline-subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    color: $color-gray-light;
+}
+.timeline-item .timeline-info .description {
+    color: $color-gray-light;
+}
+.timeline-item .timeline-info .meta {
+    color: black;
+    margin-top: 10px;
+}
+
+.timeline-item .timeline-info .meta p {
+    margin: 0;
+}
+
+.content .timeline-item .portfolio-image {
+    padding: 20px;
+    background: white;
+    border-left: 1px solid #dedede;
+    text-align: center;
+}
+@media screen and (min-width: 760px) {
+    .content .timeline-item .portfolio-image {
+        float: left;
+        width: 70%;
+    }
+}
+
+.content .timeline-item .portfolio-image img {
+    width: 100%;
+    max-width: 610px;
+    height: auto;
+}
+
+.content .timeline-item .portfolio-image div.loading img {
+    width: auto;
+    height: auto;
+}
+
+.content div.loading {
+    color: #c4c4c4;
+    position: absolute;
+    width: 100px;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.content div.loading img {
+    vertical-align: middle;
+}
+
+.content div.loading img.rotate {
+    -webkit-animation-name: rotate;
+    -ms-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear;
+}

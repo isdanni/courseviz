@@ -1,0 +1,35 @@
+/* ==========  Blzee  ========== */
+@font-face {
+    font-family: 'Blzee';
+    src: url('../fonts/blzee/blzee.eot');
+    src: url('../fonts/blzee/blzee.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blzee/blzee.woff') format('woff'),
+         url('../fonts/blzee/blzee.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// CUSTOM FONT 1 - Sue Ellen Francisco (You can use the helper class .font-custom-1)
+@font-face {
+    font-family: 'Sue Ellen Francisco';
+    src: url('../fonts/other/sue-ellen-francisco.ttf');
+    src: url('../fonts/other/sue-ellen-francisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+// CUSTOM FONT 2 - Pcifico (You can use the helper class .font-custom-2)
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/other/pacifico.ttf');
+    src: url('../fonts/other/pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+// CUSTOM FONT 3 - Pcifico (You can use the helper class .font-custom-3)
+@font-face {
+    font-family: 'YellowTail';
+    src: url('../fonts/other/yellowtail-regular.ttf');
+    src: url('../fonts/other/yellowtail-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

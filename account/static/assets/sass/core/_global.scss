@@ -1,0 +1,268 @@
+// Sections
+.slice {
+    padding-top: $spacer * 4;
+    padding-bottom: $spacer * 4;
+    position: relative;
+}
+.slice-xs {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    position: relative;
+}
+.slice-sm {
+    padding-top: $spacer * 2;
+    padding-bottom: $spacer * 2;
+    position: relative;
+}
+.slice-lg {
+    padding-top: $spacer * 6;
+    padding-bottom: $spacer * 6;
+    position: relative;
+}
+.slice-xl {
+    padding-top: $spacer * 8; 
+    padding-bottom: $spacer * 8;
+    position: relative;
+}
+.slice-xxl {
+    padding-top: $spacer * 12;
+    padding-bottom: $spacer * 12;
+    position: relative;
+}
+// Slice for video covers
+@media(min-width: 767px) {
+    .slice-video {
+        min-height: 600px;
+    }
+
+}
+
+// Slice offsets
+.slice--offset-top {
+    padding-top: 10rem!important;
+}
+.slice--offset-bottom {
+    padding-bottom: 10rem!important;
+}
+// Slice arrows
+.slice--arrow:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 30px;
+    margin-left: -30px;
+    z-index: 600;
+}
+.slice--arrow.slice--arrow-white:before {
+    border-top-color: #fff;
+}
+.slice--arrow.slice--arrow.bg-base-1:before {
+    border-top-color: $color-base-1;
+}
+.slice--arrow.slice--arrow.bg-base-2:before {
+    border-top-color: $color-base-2;
+}
+.slice--arrow.slice--arrow.bg-base-3:before {
+    border-top-color: $color-base-3;
+}
+.slice--arrow.slice--arrow.bg-base-4:before {
+    border-top-color: $color-base-4;
+}
+.slice--arrow.slice--arrow.bg-base-5:before {
+    border-top-color: $color-base-5;
+}
+// Container
+@media (min-width: 1200px) {
+    .container-lg {
+        max-width: 1500px;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+// Small container
+@media (min-width: 768px) {
+    .container-xs {
+        width: 600px;
+    }
+    .container-sm {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container-xs {
+        width: 750px;
+    }
+    .container-sm {
+        width: 870px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-xs {
+        width: 750px;
+    }
+    .container-sm {
+        width: 900px;
+    }
+}
+
+// Bootstrap rows with custom spacing
+.row-no-padding {
+    margin: 0;
+}
+.row-no-padding > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.row-sm-padding > [class*="col-"] {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+
+.row-cols-gutter-xs > [class*="col-"] {
+    padding-left: 2.5px !important;
+    padding-right: 2.5px !important;
+    margin-bottom: 5px!important;
+}
+
+// Add vertical space when columns reach a certain breakpoint
+.cols-space > div[class*='col-']:not(:last-child) {
+    margin-bottom: 3rem;
+}
+@media(max-width: 575px) {
+    .cols-xs-space > div[class*='col-']:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+@media(max-width: 767px) {
+    .cols-sm-space > div[class*='col-']:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+@media(max-width: 991px) {
+    .cols-md-space > div[class*='col-']:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+@media(max-width: 1199px) {
+    .cols-lg-space > div[class*='col-']:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+// Add a light border between columns
+.cols-delimited > div[class*='col-']:not(:last-child) {
+    border-right: 1px solid $border-color-base;
+}
+@media(max-width: 575px) {
+    .cols-xs-delimited > div[class*='col-']:not(:last-child) {
+        border-right: 1px solid $border-color-base;
+    }
+}
+@media(max-width: 767px) {
+    .cols-sm-delimited > div[class*='col-']:not(:last-child) {
+        border-right: 1px solid $border-color-base;
+    }
+}
+@media(max-width: 991px) {
+    .cols-md-delimited > div[class*='col-']:not(:last-child) {
+        border-right: 1px solid $border-color-base;
+    }
+}
+@media(max-width: 1199px) {
+    .cols-lg-delimited > div[class*='col-']:not(:last-child) {
+        border-right: 1px solid $border-color-base;
+    }
+}
+
+// Custom spacing for different resolutions
+// .row-wrapper > .row > [class*='col-'] {
+//     margin-top: $spacer * 2;
+// }
+
+
+@media(max-width: 575px) {
+    .row-wrapper > .row .col-12:not(:last-child),
+    .row-wrapper > .row:not(:last-child) {
+        margin-bottom: $spacer * 2;
+    }
+}
+@media(min-width: 576px) and (max-width: 767px) {
+    .row-wrapper > .row .col-sm-12:not(:last-child),
+    .row-wrapper > .row:not(:last-child) {
+        margin-bottom: $spacer * 2;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+    .row-wrapper .row .col-md-12:not(:last-child),
+    .row-wrapper .row:not(:last-child) {
+        margin-bottom: $spacer * 2;
+    }
+}
+@media(min-width: 992px) {
+    .row-wrapper > .row:not(:last-child) {
+        margin-bottom: $spacer * 2;
+    }
+}
+
+
+// Container with offset (to bring it on top of other elements)
+@media(min-width: 992px) {
+    .container-over-top {
+        min-height: 200px;
+        //max-width: 1200px;
+        margin: -150px auto 0;
+        z-index: 10;
+        position: relative;
+        padding-top: 0;
+    }
+    .container-over-top .container-inner {
+        border-radius: $border-radius;
+        padding: $spacer * 2;
+    }
+    .container-over-top--style-2 {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        border-bottom: medium double #ccc;
+    }
+}
+
+.col-wrapper--text {
+    padding: 3rem;
+}
+
+@media(min-width: 992px) {
+    .col-wrapper--text {
+        padding: 3rem 7rem;
+    }
+}
+
+// Columns wrappers
+.col-wrapper--spaced {
+    padding: 3rem;
+}
+.col-wrapper--spaced-x {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.col-wrapper--spaced-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media(min-width: 992px) {
+    .col-lg-space-left {
+        padding-left: 2.5rem;
+    }
+    .col-lg-space-right {
+        padding-right: 2.5rem;
+    }
+}

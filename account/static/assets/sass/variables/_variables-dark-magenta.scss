@@ -1,0 +1,102 @@
+// Body
+$body-bg: #0a0a0c;
+
+// Gray tones
+$color-gray-dark:                 #f3f3f3;
+$color-gray:                      #fff;
+$color-gray-light:                #ddd;
+$color-gray-lighter:              #999;
+$color-gray-lightest:             #333;
+
+// Base color 1 (Site color 1)
+$color-base-1: #F0386B;
+$color-base-text-1: #FFF;
+
+// Base color 2 (Site color 2)
+$color-base-2: #FF5376;
+$color-base-text-2: #FFF;
+
+// Base color 3. Choose a neutral color such gray or light gray
+$color-base-3: $color-gray-light;
+$color-base-text-3: rgba(255, 255, 255, 0.9);
+
+// Base color 4. Choose a dark color (or a light one for the dark theme)
+$color-base-4: #1d2125;
+$color-base-text-4: #FFF;
+
+// Base color 5. Choose a light color (or a dark one for the dark theme)
+$color-base-5: #FFF;
+$color-base-text-5: #0A0814;
+
+// Background colors used for sections (.slice)
+$section-color-1: #0a0a0c;
+$section-color-2: darken(#0a0a0c, 3%);
+$section-color-3: $color-space-gray;
+$section-color-4: darken($color-space-gray, 10%);
+
+// Headings
+$heading-color: rgb(255, 255, 255);
+$heading-inverse-color: $color-white;
+
+// Section titles
+$section-title-color: $color-gray-dark;
+$section-title-color-inverse: $color-gray-lightest;
+
+// Navbar (default) links and text
+$navbar-nav-link-bg: transparent;
+$navbar-nav-link-bg-hover: transparent;
+$navbar-nav-link-bg-active: transparent;
+
+$navbar-light-nav-link-color: rgba(0, 0, 0, 0.8);
+$navbar-nav-link-color-hover: $color-base-1;
+$navbar-nav-link-color-active: $color-base-1;
+
+
+// Navbar (light) - link colors
+$navbar-light-nav-link-bg: transparent;
+$navbar-light-nav-link-bg-hover: transparent;
+$navbar-light-nav-link-bg-active: transparent;
+
+$navbar-nav-link-color: rgba(255, 255, 255, 0.8);
+$navbar-light-nav-link-color-hover: $color-base-1;
+$navbar-light-nav-link-color-active: $color-base-1;
+
+// Borders
+$border-color-base: rgba(255, 255, 255, 0.05);
+$border-color-inner: rgba(243, 243, 243, 0.7);
+
+// Sidebar
+$sidebar-bg: #fafafa;
+$sidebar-border-color: $border-color-base;
+$sidebar-object-border-color: darken($sidebar-bg, 10%);
+
+// Slidebar
+$slidebar-bg: #1f1f1f;
+$slidebar-border-color: transparent;
+$slidebar-color: rgba(255, 255, 255, 0.5);
+$slidebar-color-hover: rgba(255, 255, 255, 0.7);
+$slidebar-heading-color: $color-gray-light;
+
+// Cards
+$card-wrapper-bg: #222;
+
+$card-bg:                  lighten($section-color-1, 5%);
+$card-border-color:        rgba(0, 0, 0, 0.1);
+$card-header-bg:           #f1f1f1;
+$card-footer-bg:           #f1f1f1;
+$card-text-color:          $color-gray;
+
+$card-inverse-bg:                  #1b1e23;
+$card-inverse-border-color:        rgba(0, 0, 0, .15);
+$card-inverse-header-bg:           #333;
+$card-inverse-footer-bg:           #333;
+
+$card-inverse-title-color:         #f3f3f3;
+$card-inverse-text-color:          #999;
+
+// Hover effects
+$hover-effect-mask-bg: rgba(0, 0, 0, .8);
+
+// Progress
+$progress-bg: lighten($section-color-1, 5%);
+$progress-bg-active: $color-base-1;

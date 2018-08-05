@@ -1,0 +1,174 @@
+/* NAV PILLS */
+.nav-pills {
+	border: 1px solid $nav-pill-border-color;
+	border-radius: $border-radius;
+}
+.nav-pills .nav-link {
+	border-radius: 0;
+	border-right: 1px solid $nav-pill-delimiter-color;
+	background-color: $nav-pill-bg;
+}
+.nav-pills .nav-item:first-child .nav-link {
+	border-top-left-radius: $border-radius;
+	border-bottom-left-radius: $border-radius;
+}
+.nav-pills .nav-item:last-child .nav-link {
+	border-top-right-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+}
+.nav-pills .nav-link:focus,
+.nav-pills .nav-link:hover {
+	background: $nav-pill-bg-hover;
+    color: $nav-pill-color-hover;
+}
+.nav-pills .nav-item + .nav-item {
+	margin-left: 2px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+	color: $nav-pill-color-active;
+	background: $nav-pill-bg-active;
+}
+
+// Nav pills - STYLE 2
+.nav-pills--style-2 {
+	margin-bottom: 15px;
+	border: 1px solid $nav-pill-border-color;
+	border-radius: $border-radius;
+}
+.nav-pills--style-2 .nav-link {
+	padding: 26px;
+	border-radius: 0;
+	border-right: 0;
+	background-color: $nav-pill-bg;
+	//font-size: @fontSize-md;
+	text-transform: uppercase;
+}
+.nav-pills--style-2 .nav-item:first-child .nav-link {
+	border-top-left-radius: $border-radius;
+}
+.nav-pills--style-2 .nav-item:last-child .nav-link {
+	border-top-right-radius: $border-radius;
+	border-right: 0;
+}
+.nav-pills--style-2 .nav-link:focus,
+.nav-pills--style-2 .nav-link:hover {
+	background: #f5f5f5;
+}
+.nav-pills--style-2 .nav-item + .nav-item {
+	margin-left: 2px;
+}
+.nav-pills--style-2 .nav-link.active,
+.nav-pills--style-2 .nav-link.active:focus,
+.nav-pills--style-2 .nav-link.active:hover {
+	background: transparent;
+	color: inherit;
+}
+
+// Nav pills - STYLE 3 (card style)
+.nav-pills--style-3 {
+	border: 0;
+}
+.nav-pills--style-3 .nav-link:after,
+.nav-pills--style-3 .nav-link:before {
+	display: table;
+	content: "";
+}
+.nav-pills--style-3 .nav-link:after {
+	clear: both;
+}
+.nav-pills--style-3 .nav-link {
+	border: 1px solid $card-border-color;
+	margin-right: 20px;
+	background: $card-bg;
+	color: $card-text-color;
+	text-align: left;
+	transition: all 0.1s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	border-radius: $card-border-radius;
+}
+.nav-pills--style-3 .nav-item:last-child .nav-link {
+	margin: 0;
+}
+.nav-pills--style-3 .nav-link:focus,
+.nav-pills--style-3 .nav-link:hover {
+    background: $color-base-1;
+	color: $color-base-text-1;
+}
+
+.nav-pills--style-3 .nav-link.active,
+.nav-pills--style-3 .nav-link.active:focus,
+.nav-pills--style-3 .nav-link.active:hover {
+	background: $card-bg;
+}
+.nav-pills--style-3 .nav-pill-text {
+	display: table-cell;
+	padding: $spacer;
+	vertical-align: middle;
+}
+.nav-pills--style-3 .nav-pill-text p {
+	margin: 0;
+}
+.nav-pills--style-3 .nav-pill-text .heading {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.nav-pills--style-3 .nav-pill-text .nav-pill-subtitle {
+	display: block;
+	margin-top: 5px;
+	color: $color-gray-light;
+	font-size: $font-size-sm;
+}
+.nav-pills--style-3 .nav-pill-text .nav-pill-aux-text {
+	display: block;
+	margin-top: 20px;
+	color: $color-gray-light;
+	font-size: $font-size-sm;
+}
+.nav-pills--style-3 .nav-pill-text .nav-pill-aux-text strong {
+	color: $color-gray-dark;
+}
+.nav-pills--style-3 .nav-pill-icon {
+	width: 60px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.nav-pills--style-3 .nav-pill-icon i {
+	font-size: 50px;
+	color: $nav-pill-color;
+}
+.nav-pills--style-3 .nav-link:focus .nav-pill-icon i,
+.nav-pills--style-3 .nav-link:hover .nav-pill-icon i {
+	color: $color-base-text-1;
+}
+
+.nav-pills--style-3 .nav-link.active .nav-pill-icon i {
+	color: $nav-pill-color-active;
+}
+.nav-pills--style-3 .nav-link:hover * {
+	color: $color-base-text-1;
+}
+@media(max-width: 767px) {
+	.nav-pills--style-3 .nav-link {
+		margin-right: 0;
+	}
+}
+
+.nav-pills--style-3.nav-pills-inverse .nav-link {
+	border: 1px solid $card-inverse-border-color;
+	background: $card-inverse-bg;
+	color: $color-gray-light;
+}
+.nav-pills--style-3.nav-pills-inverse .nav-link:focus,
+.nav-pills--style-3.nav-pills-inverse .nav-link:hover {
+    background: $color-base-1;
+	color: $color-base-text-1;
+}
+.nav-pills--style-3.nav-pills-inverse .nav-link.active,
+.nav-pills--style-3.nav-pills-inverse .nav-link.active:focus,
+.nav-pills--style-3.nav-pills-inverse .nav-link.active:hover {
+	background: $color-base-1;
+	color: $color-base-text-1;
+}

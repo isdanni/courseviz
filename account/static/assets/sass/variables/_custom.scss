@@ -1,0 +1,70 @@
+/* 
+
+Copy and paste the variables that you want to modify. The default ones will be overridden.
+Below is a basic example of how to edit Sass variables. 
+It is a basic level of customization that will help you modify the primary colors and some other properties
+
+Uncomment the lines you want to edit. Remove the ones you don't need or add new ones from _variables.scss
+
+*/
+
+/* Body */
+//$body-bg: #fff;
+
+/* Gray tones */
+// $color-gray-dark:                 #333;
+// $color-gray:                      #676767;
+// $color-gray-light:                #818a91;
+// $color-gray-lighter:              #eceeef;
+// $color-gray-lightest:             #f7f7f9;
+
+/* Base color 1 (Site color 1) */
+// $color-base-1: #2e7eed;
+// $color-base-text-1: #FFF;
+
+/* Base color 2 (Site color 2) */
+// $color-base-2: #2e7eed;
+// $color-base-text-2: #FFF;
+
+/* Base color 3. Choose a neutral color such gray or light gray */
+// $color-base-3: $color-gray-light;
+// $color-base-text-3: rgba(255, 255, 255, 0.9);
+
+/* Base color 4. Choose a dark color (or a light one for the dark theme) */
+// $color-base-4: #1d2125;
+// $color-base-text-4: #FFF;
+
+/* Base color 5. Choose a light color (or a dark one for the dark theme) */
+// $color-base-5: #FFF;
+// $color-base-text-5: #0A0814;
+
+/* Background colors used for sections (.slice) */
+// $section-color-1: #FFF;
+// $section-color-2: #fcfcfc;
+// $section-color-3: $color-space-gray;
+// $section-color-4: darken($color-space-gray, 10%);
+
+/* Fonts */
+// $font-family-base: 'Nunito', sans-serif;
+// $font-family-alt: 'Nunito', sans-serif;
+
+/* Paragraph font setttings */
+// $paragraph-font-size: 1rem;
+// $paragraph-line-height: 1.65rem;
+
+/* Headings */
+// $heading-text-transform: none;
+// $heading-font-weight: 500;
+// $heading-color: #333;
+// $heading-inverse-color: $color-white;
+
+/* Section titles */
+// $section-title-text-transform: capitalize;
+// $section-title-font-size: $font-size-h2;
+// $section-title-font-weight: 400;
+// $section-title-color: $color-gray-dark;
+// $section-title-color-inverse: $color-white;
+// $section-title-delimiter-width: 23px;
+// $section-title-delimiter-border-width: 1px;
+// $section-title-delimiter-border-color: $color-gray-dark;
+// $section-title-delimiter-border-color-inverse: $color-white;

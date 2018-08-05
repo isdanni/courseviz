@@ -1,0 +1,154 @@
+section.ss-slice {
+	position: relative;
+	padding-top: $spacer * 4;
+	padding-bottom: $spacer * 4;
+}
+section.ss-slice::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+// Triangles
+.ss-style-triangles::after {
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+.ss-style-triangles::after {
+	bottom: -50px;
+	z-index: 10;
+	background: inherit;
+}
+
+// Double Diagonal line
+.ss-slice.ss-style-doublediagonal {
+	z-index: 1;
+	padding-bottom: 10em;
+}
+.ss-style-doublediagonal::after,
+.ss-style-doublediagonal::before {
+	top: 0;
+	left: -25%;
+	z-index: -1;
+	width: 150%;
+	height: 75%;
+	background: inherit;
+	-webkit-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+// Half Circle
+.ss-style-halfcircle::after,
+.ss-style-halfcircle::before {
+	left: 50%;
+	z-index: 10;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: inherit;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.ss-style-halfcircle::before {
+	top: -50px;
+}
+.ss-style-halfcircle::after {
+	bottom: -50px;
+}
+
+// Multiple Triangles
+.ss-style-multitriangles::after,
+.ss-style-multitriangles::before {
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+.ss-style-multitriangles::before {
+	top: -25px;
+	background: inherit;
+	box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+.ss-style-multitriangles::after {
+	bottom: -25px;
+	z-index: 10;
+	background: inherit;
+	box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+
+// Bottom rounded
+.ss-style-roundedsplit {
+	padding-top: 7em;
+	border-radius: 0 0 80px 80px;
+}
+.ss-style-roundedsplit::before {
+	left: 0;
+	z-index: 10;
+	width: 50%;
+	background: inherit;
+}
+.ss-style-roundedsplit::before {
+	border-radius: 0 80px 0 0;
+}
+// Inverted rounded corners
+.ss-style-invertedrounded {
+	padding: 13em 10% 10em;
+	border-radius: 0 0 0 90px;
+}
+.ss-style-invertedrounded::after,
+.ss-style-invertedrounded::before {
+	left: 0;
+	z-index: -1;
+	height: 90px;
+	background: darken($color-base-1, 10%);
+}
+.ss-style-invertedrounded::before {
+	top: 100%;
+	width: 100%;
+	border-radius: 0 90px 0 0;
+}
+.ss-style-invertedrounded::after {
+	bottom: 0;
+	z-index: -1;
+	width: 50%;
+}
+
+// Zig zag
+.ss-style-zigzag::after,
+.ss-style-zigzag::before {
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: block;
+	height: 90px;
+	background-size: 50px 100%;
+}
+.ss-style-zigzag::after {
+	top: 100%;
+    background-position: 50%;
+}
+.bg-base-1.ss-style-zigzag::after {
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, $color-base-1), color-stop(0.25, $color-base-1));
+	background-image: linear-gradient(135deg, $color-base-1 25%, transparent 25%), linear-gradient(225deg, $color-base-1 25%, transparent 25%);
+}
+.sct-color-1.ss-style-zigzag::after {
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, $section-color-1), color-stop(0.25, $section-color-1));
+	background-image: linear-gradient(135deg, $section-color-1 25%, transparent 25%), linear-gradient(225deg, $section-color-1 25%, transparent 25%);
+}
+.sct-color-2.ss-style-zigzag::after {
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, $section-color-2), color-stop(0.25, $section-color-2));
+	background-image: linear-gradient(135deg, $section-color-2 25%, transparent 25%), linear-gradient(225deg, $section-color-2 25%, transparent 25%);
+}
+.sct-color-3.ss-style-zigzag::after {
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, $section-color-3), color-stop(0.25, $section-color-3));
+	background-image: linear-gradient(135deg, $section-color-3 25%, transparent 25%), linear-gradient(225deg, $section-color-3 25%, transparent 25%);
+}
+.sct-color-4.ss-style-zigzag::after {
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, $section-color-4), color-stop(0.25, $section-color-4));
+	background-image: linear-gradient(135deg, $section-color-4 25%, transparent 25%), linear-gradient(225deg, $section-color-4 25%, transparent 25%);
+}

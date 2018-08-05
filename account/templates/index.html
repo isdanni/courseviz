@@ -1,0 +1,1356 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>{% block title %}CourseViz{% endblock %}</title>
+
+<!-- Page loader -->
+<script src="{% static '/assets/vendor/pace/js/pace.min.js' %}"></script>
+<link rel="stylesheet" href="{% static '/assets/vendor/pace/css/pace-minimal.css' %}" type="text/css">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{% static '/assets/vendor/bootstrap/css/bootstrap.min.css' %}" type="text/css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Open+Sans|Quicksand|Raleway|Roboto+Condensed|Rubik|Ubuntu|Vollkorn" rel="stylesheet">
+
+<!-- Plugins -->
+<link rel="stylesheet" href="{% static '/assets/vendor/swiper/css/swiper.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/vendor/hamburgers/hamburgers.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/vendor/animate/animate.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/vendor/fancybox/css/jquery.fancybox.min.css' %}">
+
+<!-- Icons -->
+<link rel="stylesheet" href="{% static '/assets/fonts/font-awesome/css/font-awesome.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/ionicons/css/ionicons.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/line-icons/line-icons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/line-icons-pro/line-icons-pro.css' %}" type="text/css">
+
+<!-- Linea Icons -->
+<link rel="stylesheet" href="{% static '/assets/fonts/linea/arrows/linea-icons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/linea/basic/linea-icons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/linea/ecommerce/linea-icons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static '/assets/fonts/linea/software/linea-icons.css' %}" type="text/css">
+
+
+<!-- Global style (main) -->
+<link id="stylesheet" type="text/css" href="{% static '/assets/css/boomerang.min.css' %}" rel="stylesheet" media="screen">
+
+<!-- Custom style - Remove if not necessary -->
+<link type="text/css" href="{% static '/assets/css/custom-style.css' %}" rel="stylesheet">
+
+<!-- Favicon -->
+<link href="{% static '/assets/images/favicon.png' %}" rel="icon" type="image/png">
+
+
+</head>
+<body>
+
+
+<!-- MAIN WRAPPER -->
+<div class="body-wrap">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-1" id="menu-1">
+    <div class="st-profile">
+        <div class="st-profile-user-wrapper">
+            <div class="profile-user-image">
+                <img src="assets/images/prv/people/person-1.jpg" class="img-circle" />
+            </div>
+            <div class="profile-user-info">
+                <span class="profile-user-name">Bertram Ozzie</span>
+                <span class="profile-user-email">username@example.com</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="st-menu-list mt-2">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Account</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-person-outline"></i> User profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-location-outline"></i> My addresses
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-card"></i> My cards
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-unlocked-outline"></i> Password update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Support center</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-information-outline"></i> About Tribus
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-email-outline"></i> Contact &amp; support
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i> Getting started
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- Header -->
+                    <div class="header">
+    <!-- Top Bar -->
+    
+    <!-- Global Search -->
+    <section id="sctGlobalSearch" class="global-search global-search-overlay">
+    <div class="container">
+        <div class="global-search-backdrop mask-dark--style-2"></div>
+
+        <!-- Search form -->
+        <form class="form-horizontal form-global-search z-depth-2-top" role="form">
+            <div class="px-4">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
+        </form>
+    </div>
+</section>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark  ">
+        <div class="container navbar-container">
+            <!-- Brand/Logo -->
+                        <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/logo-1-a.png" class="d-none d-lg-inline-block" alt="Boomerang">
+                <img src="assets/images/logo/logo-1-a.png" class="d-lg-none" alt="Boomerang">            </a>
+            
+            <div class="d-inline-block">
+                <!-- Navbar toggler  -->
+                <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
+    <!-- Navbar search - For small resolutions -->
+    <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
+        <form class="" role="form">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                <button class="btn btn-base-3" type="button">Go!</button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+
+            <div class="dropdown-menu">
+                <div class="mega-dropdown-menu row row-no-padding">
+                    <div class="mega-dropdown-col mega-dropdown-col-cover mega-dropdown-col-cover--left col-lg-5 d-none d-lg-block d-xl-block" style="background-image: url(assets/images/prv/other/img-14-1000x900.jpg); background-position: left bottom;">
+                        <span class="mask mask-dark--style-2"></span>
+                        <div class="mega-dropdown-col-inner d-flex align-items-center no-padding">
+                            <div class="col">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="px-5">
+                                            <h2 class="heading heading-2 strong-400 c-white">
+                                                One template. Infinite solutions.
+                                            </h2>
+                                            <p class="strong-300 c-white mt-4">
+                                                Boomerang provides a comprehensive set of features and layouts that's super easy to get up and running. Build beautiful and
+                                                modular sites in no time.
+                                            </p>
+                                            <div class="btn-container mt-5">
+                                                <a href="https://goo.gl/9BbH7R" target="_blank" class="btn btn-styled btn-white btn-outline btn-circle">Purchase now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2 ml-lg-auto">
+                        <ul class="megadropdown-links">
+                            <li class="dropdown-header pt-0">
+                                <h3 class="meganav-section-title text-uppercase">Default</h3>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-1.html">
+                                    Homepage 1
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-2.html">
+                                    Homepage 2
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-3.html">
+                                    Homepage 3
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-4.html">
+                                    Homepage 4
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-5.html">
+                                    Homepage 5
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2">
+                        <ul class="megadropdown-links">
+                            <li class="dropdown-header pt-0">
+                                <h3 class="meganav-section-title text-uppercase">
+                                    Landing Pages I
+                                </h3>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-agency.html">
+                                    Agency
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-architecture.html">
+                                    Architecture
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-digital.html">
+                                    Digital services
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-marketing.html">
+                                    Marketing
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-presentation.html">
+                                    Presentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-portfolio-creative.html">
+                                    Portfolio: Creative
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2">
+                        <ul class="megadropdown-links">
+                            <li class="dropdown-header pt-0">
+                                <h3 class="meganav-section-title text-uppercase">
+                                    Landing pages II
+                                </h3>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-portfolio-minimalist.html">
+                                    Portfolio: Minimalist
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/homepages/homepage-portfolio-photography.html">
+                                    Portfolio: Photography
+                                </a>
+                            </li>
+                            <li>
+                                 <a class="dropdown-item" href="html/default/homepages/homepage-software-2.html">
+                                     Software Showcase
+                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Pages
+            </a>
+
+            <ul class="dropdown-menu">
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/about-1.html">About 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/about-5.html">About 5</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="html/default/pages/about-me-1.html">About me 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/about-me-2.html">About me 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Careers</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/careers.html">Careers listing</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/careers-post.html">Job post</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/contact-4.html">Contact us 4</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/contact-5.html">Contact us 5</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/contact-5-dark.html">Contact us 5 (Dark)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pricing</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/pricing-4.html">Pricing 4</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu 2">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/services-1.html">Services 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/services-5.html">Services 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu 3">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/team-1.html">Team 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/team-2.html">Team 2</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/team-3.html">Team 3</a></li>
+                    </ul>
+                </li>
+
+                <div class="dropdown-divider"></div>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User account</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/profile/account-settings.html">Account settings</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/account-orders.html">Order history</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/account-cards.html">Credit cards</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/account-security.html">Account security</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/account-connections.html">Connections</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign in</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/profile/sign-in-1.html">Sign in: Style 1</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign up</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/profile/sign-up-1.html">Sign up: Style 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/sign-up-2.html">Sign up: Style 2</a></li>
+                        <li><a class="dropdown-item" href="html/default/profile/sign-up-3.html">Sign up: Style 3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ultilities</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/pages/support-center-1.html">Support center: Style 1</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/support-center-2.html">Support center: Style 2</a></li>
+                        <li><a class="dropdown-item" href="html/default/pages/error-404-1.html">Error 404</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Submenu child 1</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu">
+                            <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Submenu child 2</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Submenu child 3</a></li>
+                                <li><a class="dropdown-item" href="#">Submenu child 3</a></li>
+                                <li><a class="dropdown-item" href="#">Submenu child 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Submenu child 2</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu child 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Portfolio
+            </a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="html/default/homepages/homepage-portfolio-creative.html" class="dropdown-item">
+                        Creative
+
+                    </a>
+                </li>
+                <li>
+                    <a href="html/default/homepages/homepage-portfolio-photography.html" class="dropdown-item">
+                        Photography
+
+                    </a>
+                </li>
+
+                <div class="dropdown-divider"></div>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Outer text</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-outer-1-col.html">One column</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-outer-2-cols.html">Two columns</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-outer-3-cols.html">Three columns</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inner text</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-inner-1-col.html">One column</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-inner-2-cols.html">Two columns</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-inner-3-cols.html">Three columns</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Text on hover</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-hover-1-col.html">One column</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-hover-2-cols.html">Two columns</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-hover-3-cols.html">Three columns</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Masonry</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-masonry-2-cols.html">Two columns</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-masonry-3-cols.html">Three columns</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Full width
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-full-width-2-cols.html">Two columns</a></li>
+                        <li><a class="dropdown-item" href="html/default/portfolio/portfolio-full-width-3-cols.html">Three columns</a></li>
+                    </ul>
+                </li>
+
+                <div class="dropdown-divider"></div>
+
+                <li>
+                    <a class="dropdown-item" href="html/default/portfolio/portfolio-case-study-1.html">
+                        Case study 1
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="html/default/portfolio/portfolio-case-study-2.html">
+                        Case study 2
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="html/default/portfolio/portfolio-case-study-3.html">
+                        Case study 3
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="html/default/portfolio/portfolio-single-1.html">
+                        Single project
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               E-commerce
+            </a>
+
+            <ul class="dropdown-menu">
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accessories
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/accessories/homepage-accessories.html">Homepage</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/accessories/product-list-full-width.html">Product list: Full width</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/accessories/product-list-filters.html">Product list: Filters</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/accessories/product-description.html">Single product</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home Deco
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/home-deco/homepage-home-deco.html">Homepage</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/home-deco/product-list-full-width.html">Product list: Full width</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/home-deco/product-list-filters.html">Product list: Filters</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/home-deco/product-description.html">Single product</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sportswear</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/sportswear/homepage-sportswear.html">Homepage</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/sportswear/product-list-full-width.html">Product list: Full width</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/sportswear/product-list-filters.html">Product list: Filters</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/sportswear/product-description.html">Single product</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Electronics
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/electronics/homepage-electronics-1.html">Homepage 1</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/electronics/homepage-electronics-2.html">Homepage 2</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/electronics/product-list-featured.html">Product list: Featured</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/electronics/product-list-filters.html">Product list: Filters</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/electronics/product-description.html">Single product</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <div class="dropdown-divider"></div>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Checkout
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/cart.html">Shopping cart</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/cart-empty.html">Empty cart</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/checkout-cart.html">Checkout: Cart</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/checkout-customer.html">Checkout: Customer</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/checkout-shipping.html">Checkout: Shipping</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/checkout-payment.html">Checkout: Payment</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/checkout-finish.html">Checkout: Placed order</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User account
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/login-register.html">Login/Register</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/account-settings.html">Account Settings</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/account-orders.html">Order history</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/account-wishlist.html">Wishlist</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/account-notifications.html">Notifications</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu d-none">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Utilities
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/cart.html">Maintenance mode</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/cart.html">Coming soon</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/e-commerce/cart.html">Invoice</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+            <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Blog
+            </a>
+
+            <ul class="dropdown-menu">
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/blog-business">
+                                Homepage
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/blog-business/articles-grid.html">
+                                Articles: Grid
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/blog-business/articles-list.html">
+                                Articles: List
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technology</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/blog-technology">
+                                Homepage
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/blog-technology/articles-grid.html">
+                                Articles: Grid
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/blog-technology/articles-list.html">
+                                Articles: List
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <div class="dropdown-divider"></div>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-classic-3-cols.html">
+                                Classic: Three columns
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-classic-masonry-3-cols.html">
+                                Classic: Masonry 3 cols
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-list.html">
+                                List
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-enhanced-3-cols.html">
+                                Cards Enhanced: Three columns
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-enhanced-masonry.html">
+                                Cards Enhanced: Masonry
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-2-cols.html">
+                                Cards: Two columns
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-3-cols.html">
+                                Cards: Three columns
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-masonry-2-cols.html">
+                                Cards: Masonry 2 cols
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-masonry-3-cols.html">
+                                Cards: Masonry 3 cols
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-cards-sidebar.html">
+                                Cards: Sidebar
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown dropdown-submenu">
+                    <a href="#" class="dropdown-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Single posts</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-post-standard.html">Standard post</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-post-sidebar.html">Post with sidebar</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="html/default/blog/blog-post-image.html">Large image post</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown megamenu">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Components
+            </a>
+
+            <div class="dropdown-menu">
+                <div class="mega-dropdown-menu row row-no-padding">
+                    <div class="mega-dropdown-col mega-dropdown-col-cover mega-dropdown-col-cover--left col-lg-5 d-none d-lg-block d-xl-block" style="background-image: url(assets/images/prv/other/img-14-1000x900.jpg); background-position: center center;">
+                        <span class="mask mask-base-1--style-1 alpha-8"></span>
+                        <div class="mega-dropdown-col-inner d-flex align-items-center no-padding">
+                            <div class="col">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="px-4">
+                                            <h2 class="heading heading-2 strong-600 c-white">
+                                                Documentation and Shortcodes
+                                            </h2>
+                                            <p class="strong-300 c-white mt-4">
+                                                Get started fast and easy with Boomerang using the documentation and shortcode examples. No matter
+                                                you are a developer or new to web design, you will
+                                                find our theme very easy to customize with
+                                                an intuitive HTML markup.
+                                            </p>
+                                            <div class="btn-container mt-5">
+                                                <a href="documentation/getting-started/introduction.html" target="_blank" class="btn btn-styled btn-base-5 btn-outline btn-circle">Read the Docs</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2 ml-lg-auto">
+                        <ul class="megadropdown-links">
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/alerts.html">
+                                    Alerts
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/badges.html">
+                                    Badges
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/buttons.html">
+                                    Buttons
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/cards.html">
+                                    Cards
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/collapse.html">
+                                    Collapse
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/countdown.html">
+                                    Countdown
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/dropdown.html">
+                                    Dropdowns
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/forms.html">
+                                    Forms
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/instagram.html">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/lightbox.html">
+                                    Lightbox
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/maps.html">
+                                    Maps
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/masonry.html">
+                                    Masonry
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2">
+                        <ul class="megadropdown-links">
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/pagination.html">
+                                    Pagination
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/progress.html">
+                                    Progress bars
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/recaptcha.html">
+                                    Recaptcha
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/content/titles.html">
+                                    Section titles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/forms.html#ex_component_sliders">
+                                    Sliders
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/tabs.html">
+                                    Tabs
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/components/typed-animations.html">
+                                    Typed animations
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/headers.html">
+                                    Headers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/sliders/boomerang-slider/index.html">
+                                    Boomerang slider
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="html/default/sliders/revolution-slider/index.html">
+                                    Revolution slider
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/footers.html">
+                                    Footers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/hero.html">
+                                    Hero blocks
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-lg-2">
+                        <ul class="megadropdown-links">
+
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/icon.html">
+                                    Icon blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/jobs.html">
+                                    Job blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/pricing.html">
+                                    Pricing blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/product.html">
+                                    Product blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/real-estate.html">
+                                    Real-Estate blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/team.html">
+                                    Team blocks
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/testimonials.html">
+                                    Testimonial blocks
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="documentation/blocks/comments.html">
+                                    Comment blocks
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a href="documentation/getting-started/introduction.html" class="nav-link dropdown-toggle">
+               Documentation
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="demos.html" class="nav-link">
+               Demos
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="pl-4 d-none d-lg-inline-block">
+    <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-sm btn-base-1 text-uppercase btn-circle">
+        Purchase now
+            </a>
+</div>
+        </div>
+    </nav>
+</div>
+
+                    <section class="slice--offset-top parallax-section parallax-section-lg" style="background-image: url('assets/images/backgrounds/slider/img-25.jpg');">
+
+                        <div class="mask mask-base-1--style-1"></div>
+
+                        <div class="container">
+                            <div class="row ">
+                                <div class="col-lg-6">
+                                    <h2 class="heading heading-inverse heading-1 strong-600 text-normal line-height-1_4 animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
+                                        Start algorithm learning with CourseViz for <span id="type_1" class="type-this" data-type-this="., searching., sorting., Greedy., Graph., Divide and Conquer., Backtracking., Randomized."></span>
+                                    </h2>
+                                    <p class="text-lg line-height-1_8 c-gray-lighter animated mt-4" data-animation-in="fadeInUpBig" data-animation-delay="200">
+                                        <span class="strong-500">CourseViz</span> is an algorithm-learning platforms for algo-newbies and enthusiasts. We provide visulization and online-compile for each type.
+                                    </p>
+
+                                    <a href="#" class="btn btn-styled btn-base-2 btn-circle text-normal mt-4 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#sct_full_demos">
+                                        Explore
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="slice-lg sct-color-1" id="sct_full_demos">
+                        <div class="container">
+                            <div class="section-title section-title--style-1 text-center mb-3">
+                                <h3 class="section-title-inner heading-2 strong-600 text-normal">
+                                    <span class="badge badge-md badge-inline bg-pink">v3.4</span>
+                                    <span class="clearfix"></span>
+                                    <span class="d-block mt-4">Categories</span>
+                                </h3>
+                                <span class="section-title-delimiter clearfix d-none"></span>
+                            </div>
+
+                            <span class="clearfix"></span>
+
+                            <div class="fluid-paragraph text-center">
+                                <p class="text-lg line-height-1_8 c-gray-light strong-300">
+                                    CourseViz is an algorithm-learning platforms for algo-newbies and enthusiasts. We provide visulization and online-compile for each type.
+                                </p>
+                            </div>
+
+                            <span class="space-xs-xl"></span>
+
+                            <div class="">
+                                <div class="row">
+                                                                        <div class="col-md-6 startup agency">
+                                        <div class="block block-image-holder mb-0 image-animate-wrapper">
+                                            <div class="block-image image-animate--hover">
+                                                <a href="html/startup-agency" target="_blank">
+                                                    <img src="assets/images/presentation/demos/startup/agency.jpg" class=" border rounded">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-body px-0">
+                                                <div class="">
+                                                    <a href="html/startup-agency" target="_blank" class="heading heading-4 strong-500">
+                                                        Searching                                                    </a>
+                                                    <p class="c-gray-light mt-2 d-none">
+                                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-md-6 startup app">
+                                        <div class="block block-image-holder mb-0 image-animate-wrapper">
+                                            <div class="block-image image-animate--hover">
+                                                <a href="html/startup-app" target="_blank">
+                                                    <img src="assets/images/presentation/demos/startup/app.jpg" class=" border rounded">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-body px-0">
+                                                <div class="">
+                                                    <a href="html/startup-app" target="_blank" class="heading heading-4 strong-500">
+                                                        Sorting                                                    </a>
+                                                    <p class="c-gray-light mt-2 d-none">
+                                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-md-6 startup app">
+                                        <div class="block block-image-holder mb-0 image-animate-wrapper">
+                                            <div class="block-image image-animate--hover">
+                                                <a href="html/startup-analitycs" target="_blank">
+                                                    <img src="assets/images/presentation/demos/startup/analitycs.jpg" class=" border rounded">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-body px-0">
+                                                <div class="">
+                                                    <a href="html/startup-analitycs" target="_blank" class="heading heading-4 strong-500">
+                                                        Graph                                                    </a>
+                                                    <p class="c-gray-light mt-2 d-none">
+                                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-md-6 startup classic">
+                                        <div class="block block-image-holder mb-0 image-animate-wrapper">
+                                            <div class="block-image image-animate--hover">
+                                                <a href="html/startup-classic" target="_blank">
+                                                    <img src="assets/images/presentation/demos/startup/classic.jpg" class=" border rounded">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-body px-0">
+                                                <div class="">
+                                                    <a href="html/startup-classic" target="_blank" class="heading heading-4 strong-500">
+                                                        Bit                                                    </a>
+                                                    <p class="c-gray-light mt-2 d-none">
+                                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-md-6 business corporate agency">
+                                        <div class="block block-image-holder mb-0 image-animate-wrapper">
+                                            <div class="block-image image-animate--hover">
+                                                <a href="html/default/homepages/homepage-1.html" target="_blank">
+                                                    <img src="assets/images/presentation/demos/default/img-1.jpg" class=" border rounded">
+                                                </a>
+                                            </div>
+
+                                            <div class="card-body px-0">
+                                                <div class="">
+                                                    <a href="html/default/homepages/homepage-1.html" target="_blank" class="heading heading-4 strong-500">
+                                                        Default                                                    </a>
+                                                    <p class="c-gray-light mt-2 d-none">
+                                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="slice has-bg-cover bg-size-cover" style="background-image: url(assets/images/backgrounds/slider/img-36.jpg); background-position: center center;">
+                        <span class="mask mask-base-1--style-1"></span>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-7 text-center">
+                                    <h2 class="heading heading-1 strong-600 c-white mb-5">
+                                        Documentation and Shortcodes
+                                    </h2>
+
+                                    <p class="lead line-height-1_8 c-white">
+                                        Get started fast and easy with Boomerang using the documentation and shortcode examples. No matter
+                                        you are a developer or new to web design, you will
+                                        find our theme very easy to customize with
+                                        an intuitive HTML markup.
+                                    </p>
+
+                                    <a href="documentation/getting-started/introduction.html" class="btn btn-styled btn-lg btn-base-5 btn-outline mt-5" target="_blank">Open the Docs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FOOTER -->
+                    <section class="slice sct-color-1 b-xs-top">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="btn-container">
+                    <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-lg btn-base-1 btn-circle">Purchase Boomerang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer footer-inverse b-xs-top">
+    <div class="footer-bottom bg-white py-4">
+        <div class="container">
+            <div class="row cols-xs-space col-sm-space align-items-center">
+                <div class="col-lg-3 col-12">
+                    <div class="text-center text-lg-left">
+                        <div class="copyright">
+                            <ul class="copy-links no-margin">
+                                <li>
+                                    &copy; 2018 Webpixels
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <ul class="footer-menu footer-menu-sm">
+                            <li>
+                                <a href="https://webpixels.io" target="_blank" style="padding-left: 0;">Official website</a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/webpixels.io" target="_blank" style="padding-left: 0;">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://facebook.com/webpixels" target="_blank" style="padding-left: 0;">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses" target="_blank">License</a>
+                            </li>
+                            <li>
+                                <a href="https://goo.gl/9BbH7R" target="_blank">Buy now</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="text-center text-lg-right">
+                        <ul class="social-media social-media--style-1-v4">
+                            <li>
+                                <a href="https://www.facebook.com/webpixels/" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/webpixels.io/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dribbble.com/webpixels" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+                </div>
+            </div>
+        </div><!-- END: st-pusher -->
+    </div><!-- END: st-container -->
+</div><!-- END: body-wrap -->
+
+<!-- SCRIPTS -->
+<a href="#" class="back-to-top btn-back-to-top"></a>
+
+<!-- Core -->
+<script src="{% static '/assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static '/assets/vendor/popper/popper.min.js' %}"></script>
+<script src="{% static '/assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/assets/js/vendor/jquery.easing.js' %}"></script>
+<script src="{% static '/assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+<script src="{% static '/assets/js/slidebar/slidebar.js' %}"></script>
+<script src="{% static '/assets/js/classie.js' %}"></script>
+
+<!-- Bootstrap Extensions -->
+<script src="{% static '/assets/vendor/bootstrap-notify/bootstrap-growl.min.js' %}"></script>
+<script src="{% static '/assets/vendor/scrollpos-styler/scrollpos-styler.js' %}"></script>
+
+<!-- Plugins: Sorted A-Z -->
+<script src="{% static '/assets/vendor/adaptive-backgrounds/adaptive-backgrounds.js' %}"></script>
+<script src="{% static '/assets/vendor/countdown/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static '/assets/vendor/dropzone/dropzone.min.js' %}"></script>
+<script src="{% static '/assets/vendor/easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+<script src="{% static '/assets/vendor/fancybox/js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static '/assets/vendor/flatpickr/flatpickr.min.js' %}"></script>
+<script src="{% static '/assets/vendor/flip/flip.min.js' %}"></script>
+<script src="{% static '/assets/vendor/footer-reveal/footer-reveal.min.js' %}"></script>
+<script src="{% static '/assets/vendor/gradientify/jquery.gradientify.min.js' %}"></script>
+<script src="{% static '/assets/vendor/headroom/headroom.min.js' %}"></script>
+<script src="{% static '/assets/vendor/headroom/jquery.headroom.min.js' %}"></script>
+<script src="{% static '/assets/vendor/input-mask/input-mask.min.js' %}"></script>
+<script src="{% static '/assets/vendor/instafeed/instafeed.js' %}"></script>
+<script src="{% static '/assets/vendor/milestone-counter/jquery.countTo.js' %}"></script>
+<script src="{% static '/assets/vendor/nouislider/js/nouislider.min.js' %}"></script>
+<script src="{% static '/assets/vendor/paraxify/paraxify.min.js' %}"></script>
+<script src="{% static '/assets/vendor/select2/js/select2.min.js' %}"></script>
+<script src="{% static '/assets/vendor/sticky-kit/sticky-kit.min.js' %}"></script>
+<script src="{% static '/assets/vendor/swiper/js/swiper.min.js' %}"></script>
+<script src="{% static '/assets/vendor/textarea-autosize/autosize.min.js' %}"></script>
+<script src="{% static '/assets/vendor/typeahead/typeahead.bundle.min.js' %}"></script>
+<script src="{% static '/assets/vendor/typed/typed.min.js' %}"></script>
+<script src="{% static '/assets/vendor/vide/vide.min.js' %}"></script>
+<script src="{% static '/assets/vendor/viewport-checker/viewportchecker.min.js' %}"></script>
+<script src="{% static '/assets/vendor/wow/wow.min.js' %}"></script>
+
+<!-- Isotope -->
+<script src="{% static '/assets/vendor/isotope/isotope.min.js' %}"></script>
+<script src="{% static '/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+
+
+
+<!-- JS Revolution Slider -->
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static '/assets/js/revolution/revolution-slider-overview.js' %}"></script>
+
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static '/assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+<!-- App JS -->
+<script src="{% static '/assets/js/boomerang.min.js' %}"></script>
+
+</body>
+</html>

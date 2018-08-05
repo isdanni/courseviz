@@ -1,0 +1,305 @@
+// Base colors used for content and titles
+.c-base-1 {
+    color: $color-base-1!important;
+}
+.c-base-2 {
+    color: $color-base-2!important;
+}
+.c-base-3 {
+    color: $color-base-3!important;
+}
+.c-base-4 {
+    color: $color-base-4!important;
+}
+.c-base-5 {
+    color: $color-base-5!important;
+}
+// Colors coresponding to base backgrounds
+.c-base-text-1 {
+    color: $color-base-text-1!important;
+}
+.c-base-text-2 {
+    color: $color-base-text-2!important;
+}
+.c-base-text-3 {
+    color: $color-base-text-3!important;
+}
+.c-base-text-4 {
+    color: $color-base-text-4!important;
+}
+.c-base-text-5 {
+    color: $color-base-text-5!important;
+}
+// Gray tones used as colors (text)
+.c-gray-dark {
+    color: $color-gray-dark!important;
+}
+.c-gray {
+    color: $color-gray!important;
+}
+.c-gray-light {
+    color: $color-gray-light!important;
+}
+.c-gray-lighter {
+    color: $color-gray-lighter!important;
+}
+.c-gray-lightest {
+    color: $color-gray-lightest!important;
+}
+// Pre-defined colors used as colors (text)
+.c-black {
+    color: $color-black!important;
+}
+.c-white {
+    color: $color-white!important;
+}
+.c-white-3 {
+    color: rgba(255, 255, 255, 0.3)!important;
+}
+.c-white-5 {
+    color: rgba(255, 255, 255, 0.5)!important;
+}
+.c-white-7 {
+    color: rgba(255, 255, 255, 0.7)!important;
+}
+.c-blue {
+    color: $color-blue!important;
+}
+.c-teal-blue {
+    color: $color-teal-blue!important;
+}
+.c-green {
+    color: $color-green!important;
+}
+.c-red {
+    color: $color-red!important;
+}
+.c-pink {
+    color: $color-pink!important;
+}
+.c-orange {
+    color: $color-orange!important;
+}
+.c-yellow {
+    color: $color-yellow!important;
+}
+.c-purple {
+    color: $color-purple!important;
+}
+
+// Social/Brands colors
+.c-twitter {
+    color: $color-twitter;
+}
+.c-facebook {
+    color: $color-facebook;
+}
+.c-instagram {
+    color: $color-instagram;
+}
+.c-skype {
+    color: $color-skype;
+}
+// Background remove
+.no-bg {
+    background: transparent!important;
+}
+// Base colors used as backgrounds
+.bg-base-1 {
+    background-color: $color-base-1!important;
+    color: $color-base-text-1!important;
+}
+.bg-base-1 .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    //color: $color-base-text-1!important;
+}
+.bg-base-2 {
+    background-color: $color-base-2!important;
+    color: $color-base-text-2!important;
+}
+.bg-base-2 .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    //color: $color-base-text-2!important;
+}
+
+.bg-base-3 {
+    background-color: $color-base-3;
+    color: $color-base-text-3;
+}
+.bg-base-3 .heading,
+.bg-base-3 a:not(.btn) {
+    //color: $color-base-text-3!important;
+}
+.bg-base-4 {
+    background-color: $color-base-4;
+    color: $color-base-text-4;
+}
+.bg-base-4 .heading,
+.bg-base-4 a:not(.btn) {
+    //color: $color-base-text-4!important;
+}
+.bg-base-5 {
+    background-color: $color-base-5;
+    color: $color-base-text-5;
+}
+.bg-base-5 .heading,
+.bg-base-5 a:not(.btn) {
+    //color: $color-base-text-5!important;
+}
+
+// Backgrounds with specialized colors
+.bg-minimalist {
+    background-color: $color-minimalist!important;
+}
+// Pre-defined colors used as backgrounds
+.bg-white {
+    background-color: $color-white;
+    //color: $color-white-text;
+}
+
+// Gray tones backgrounds
+.bg-gray-dark {
+    background-color: $color-gray-dark;
+    //color: $color-gray-lighter;
+}
+.bg-gray-dark *:not(.btn) {
+    //color: $color-gray-lighter!important;
+}
+.bg-gray-light {
+    background-color: $color-gray-light;
+    //color: $color-gray-dark;
+}
+.bg-gray-light *:not(.btn) {
+    //color: $color-gray-dark!important;
+}
+.bg-gray-lighter {
+    background-color: $color-gray-lighter;
+    //color: $color-gray-dark;
+}
+.bg-gray-lighter *:not(.btn) {
+    //color: $color-gray-dark!important;
+}
+// Pre-defined background colors
+.bg-black {
+    background-color: $color-black;
+    //color: $color-black-text;
+}
+
+.block-rainbow.bg-black *:not(.btn),
+.bg-black .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    //color: $color-black-text;
+}
+
+.bg-space-gray {
+    background-color: $color-space-gray;
+    //color: $color-space-gray-text;
+}
+.bg-space-gray .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    //color: $color-space-gray-text!important;
+}
+.bg-blue {
+    background-color: $color-blue!important;
+    color: $color-blue-text;
+}
+.bg-blue .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-blue-text!important;
+}
+.bg-teal-blue {
+    background-color: $color-teal-blue!important;
+    //color: $color-teal-blue-text;
+}
+.bg-teal-blue .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    //color: $color-teal-blue-text!important;
+}
+.bg-green {
+    background-color: $color-green!important;
+    color: $color-green-text;
+}
+.bg-green .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-green-text!important;
+}
+.bg-red {
+    background-color: $color-red!important;
+    color: $color-red-text;
+}
+.bg-red .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-red-text!important;
+}
+.bg-pink {
+    background-color: $color-pink!important;
+    color: $color-pink-text;
+}
+.bg-pink .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-pink-text!important;
+}
+.bg-orange {
+    background-color: $color-orange!important;
+    color: $color-orange-text;
+}
+.bg-orange .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-orange-text!important;
+}
+.bg-yellow {
+    background-color: $color-yellow!important;
+    color: $color-yellow-text;
+}
+.bg-yellow .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-yellow-text!important;
+}
+.bg-purple {
+    background-color: $color-purple!important;
+    color: $color-purple-text;
+}
+.bg-purple .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: $color-purple-text!important;
+}
+
+// Background colors used for large sections (.slice)
+.sct-color-1 {
+    background-color: $section-color-1;
+}
+.sct-color-2 {
+    background-color: $section-color-2;
+}
+.sct-color-3 {
+    background-color: $section-color-3;
+    //color: invert($section-color-3);
+}
+.sct-color-3 .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: invert($section-color-3);
+}
+.sct-color-4 {
+    background-color: $section-color-4;
+}
+.sct-color-4 .sct-inner *:not(.btn):not(.alert):not(.form-control):not(code) {
+    color: invert($section-color-4);
+}
+// Gradient backgrounds
+.bg-gradient-1 {
+    background: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    background: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -o-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -ms-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -moz-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+    border-image: -webkit-linear-gradient(left, rgb(233, 22, 140) 2%, rgb(247, 82, 84) 99%);
+}
+
+.bg-gradient-2 {
+    background: #f4fdff;
+    background: -moz-linear-gradient(top, #f4fdff 0%, #ffffff 40%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f4fdff 0%,#ffffff 40%,#ffffff 100%);
+    background: linear-gradient(to bottom, #f4fdff 0%,#ffffff 40%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4fdff', endColorstr='#ffffff',GradientType=0 );
+}
+.bg-gradient-blue-pink {
+    background-color: #E55D87;
+    background-color: -webkit-linear-gradient(to left, #E55D87 , #5FC3E4);
+    background-color: linear-gradient(to left, #E55D87 , #5FC3E4);
+}
+.bg-gradient-electric-red {
+    background-color: #D31027;
+    background-color: -webkit-linear-gradient(to left, #D31027 , #EA384D);
+    background-color: linear-gradient(to left, #D31027 , #EA384D);
+}
